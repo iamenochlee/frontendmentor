@@ -1,0 +1,41 @@
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: $light-greyish-blue;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+    width: min(95%, 70em);
+    padding-block: 2rem;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+    ;
+    grid-auto-columns: 1fr;
+
+    @include tablet{
+        grid-template-areas: 
+            'one one'
+            'two five'
+            'three five' 
+            'four four';
+    }
+
+
+    @include desktop{
+            //grid-template-columns: repeat(4, minmax(145px, 1fr));
+            grid-template-areas: 
+            'one one two five'
+            'three four four five';
+            
+        
+    }
+}

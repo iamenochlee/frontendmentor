@@ -1,0 +1,150 @@
+*, 
+html,
+body,
+main{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat";
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    place-items: center;
+}
+
+main .frame{
+    background-color: hsl(0, 0%, 100%);
+    width: 600px;
+    height: 450px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: -1px 7px 21px -7px rgba(133,126,126,0.54);
+    -webkit-box-shadow: -1px 7px 21px -7px rgba(133,126,126,0.54);
+    -moz-box-shadow: -1px 7px 21px -7px rgba(133,126,126,0.54);
+    overflow: hidden;
+}
+
+main .frame .image-desktop{
+    width: 300px;
+}
+
+main .frame .image-mobile{
+    display: none;
+}
+
+main .frame .container-text{
+    margin: 35px 30px;
+}
+
+main .frame .container-text h2{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    color: hsl(228, 12%, 48%);
+}
+
+main .frame .container-text h1{
+    line-height: 32px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces";
+}
+
+main .frame .container-text p{
+    font-size: 14px;
+    margin-bottom: 32px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 450;
+}
+
+main .frame .container-text small{
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+main .frame .container-text span{
+    font-size: 12px;
+    text-decoration: line-through;
+    position: relative;
+    bottom: 5px;
+    color: hsl(228, 12%, 48%) ;
+}
+
+main .frame .container-text button{
+    width: 235px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    border-radius: 10px;
+    margin-top: 28px;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+main .frame .container-text button:hover{
+    background-color: hsl(158, 53%, 24%);
+}
+
+main .frame .container-text button img{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+main .frame .container-text button small{
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+
+@media (max-width: 42em) {
+    main .frame {
+        width: 340px;
+        height: 612px;
+        display: block;
+    }
+
+    main .frame .image-desktop{
+       display: none;
+    }
+
+    main .frame .image-mobile{
+        display: block;
+        width: 340px;
+        height: 240px;
+    }
+    
+    main .frame .container-text h1{
+        line-height: 30px;
+        margin-top: 15px;
+        margin-bottom: 18px;
+        font-size: 28px;
+    }
+    
+    main .frame .container-text p{
+        margin-bottom: 30px;
+    }
+    
+    main .frame .container-text small{
+        font-size: 32px;
+    }
+    
+    main .frame .container-text button{
+        margin-top: 20px;
+    }
+    
+}

@@ -1,0 +1,35 @@
+.profile{
+    @include flex-layout(row);
+    gap: $gap;
+    margin-bottom: $margin-pr;
+
+   /*  @include desktop{
+        margin-bottom: $margin-sm;
+    } */
+
+    ul{
+        list-style: none;
+        
+        li{
+            font-size: $font-size-md;
+        }
+
+        .odd{
+            color: red;
+        }
+
+        li:first-child{
+            color: $clr-name;
+        }
+
+        li.odd{
+            color: $clr-dark-blue;
+        }
+
+        li:nth-child(2){
+            color: $clr-rank;
+        }
+    }
+
+
+}

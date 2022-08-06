@@ -1,0 +1,55 @@
+//colors
+
+$clr-violet : hsl(263, 55%, 52%);
+$clr-grey-blue: hsl(217, 19%, 35%);
+$clr-dark-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$clr-rank: hsl(0, 0%, 70%);
+$light-greyish-blue: hsl(210, 46%, 95%);
+$clr-quote-text: hsl(0, 0%, 70%);
+$clr-name: hsl(0, 0%, 92%);
+$clr-dark: hsl(0, 0%, 50%);
+
+//fonts
+
+$font-weights: (
+    "regular": 500,
+    "bold": 600
+);
+
+
+$font-size-sm: 0.75rem;
+$font-size-md: 0.81rem;
+$font-size-lg: 1rem;
+$font-size-xl: 1.26rem;
+
+//spacing
+
+$padding-sm: 1rem;
+$padding-pr: 1.25rem; //20px
+$padding-md: 1.562rem; //25px
+$padding-lg: 1.875rem; //30px
+$padding-xl: 4.5rem; //72px
+$padding-xxl: 10.31rem; //165px
+
+
+$margin-sm: 1.25rem; //16px
+$margin-pr: 1.5rem; //20px
+$margin-md: 1.562rem; //25px
+$margin-lg: 1.875rem; //30px
+
+$gap: 1rem;
+
+//border-radius
+
+$border-radius-primary: 0.625rem;
+$border-radius-secondary: 50%;
+
+
+//responsive
+
+$desktop: 60em;
+$tablet: 35em;
+
+
+

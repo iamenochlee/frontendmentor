@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+:root{
+    --bg-color: hsl(233, 47%, 7%);
+    --container-bg-color: hsl(244, 38%, 16%);
+    --color-violet: hsl(277, 64%, 61%);
+    --color-white: hsl(0, 0%, 100%);
+    --slightly-transparent-primary: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-secondary: hsla(0, 0%, 100%, 0.6);
+}
+
+
+*,
+html,
+body,
+main,
+div{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+main .container{
+    max-width: 73%;
+    height: 27.85rem;
+    background: linear-gradient(to top, hsla(246, 38%, 16%, 0.3) 20%, rgb(70, 39, 98, 0.5) 80%);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+main .container .container--contents{
+    flex-basis: 52%;
+    padding: 6.5% 5% 4% 6%;
+}
+
+main .container .container--contents__header{
+    color: var(--color-white);
+    margin-bottom: 1.49rem;
+    font-size: 2.25em;
+    font-weight: 700;
+}
+
+main .container .container--contents__p{
+    margin-bottom: 4.6rem;
+    color: var(--slightly-transparent-primary);
+    font-size: 15px;
+    line-height: 1.62;
+    font-weight: 200;
+    font-family: 'Inter';
+}
+
+main .container .container--contents .container--contents__list{
+    display: flex;
+    color: var(--slightly-transparent-secondary);
+    gap: 4.1rem;
+}
+
+main .container .container--contents .container--contents__list 
+.container--contents__list--item{
+    display: block;
+}
+
+main .container .container--contents .container--contents__list 
+.container--contents__list--header{
+    font-weight: 700;
+    font-size: 1.375rem;
+    margin-bottom: 0.3rem;
+    color: var(--slightly-transparent-secondary);
+}
+
+main .container .container--contents .container--contents__list 
+.container--contents__list--item small{
+    font-size: 0.75rem;
+    font-family: 'Lexend Deca';
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+
+main .container .container--image{
+    flex-basis: 49%;
+    width: 100%;
+    height: auto;
+}
+
+main .container .container--image .container--image__picture{
+    width: 100%;
+    background-image: url(images/desktop.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+main .container .container--image .container--image__overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #9838dd; 
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+}
+
+span {
+    color: #a162cd;
+}
+
+@media (max-width: 50em) {
+    main{
+        height: 59.75rem;
+        position: relative;
+    }
+
+    main .container{
+        max-width: 21rem;
+        height: 49.18rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:flex-end;
+    }
+
+    main .container .container--image{
+        flex-basis: 30%;
+        width: 100%;
+        height: auto;
+    }
+    
+    main .container .container--image .container--image__picture{
+        max-width: 100%;
+        background-image: url(images/mobile.jpg);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    main .container .container--image .container--image__overlay{
+        width: 22.3rem;
+        height: 14.76rem;
+    }
+
+    main .container .container--contents{
+        padding-top: 45px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    main .container .container--contents__header{
+        margin-bottom: 1rem;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    main .container .container--contents__p{
+        margin-bottom: 2.4rem;
+        font-size: 15px;
+        text-align: center;
+        max-width: 265px;
+    }
+
+    main .container .container--contents .container--contents__list{
+        display: block;
+        text-align: center;
+    }
+    
+    main .container .container--contents .container--contents__list 
+    .container--contents__list--header{
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    main .container .container--contents .container--contents__list 
+    .container--contents__list--item{
+        margin-bottom: 25px;
+    }
+    
+    main .container .container--contents .container--contents__list 
+    .container--contents__list--item small{
+        font-size: 0.75rem;
+        font-family: 'Lexend Deca';
+        font-weight: 200;
+        letter-spacing: 1px;
+        color: var(--color-white);
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 980px){
+    main .container{
+        display: flex;
+    }
+
+    main .container .container--contents{
+        flex-basis: 50%;
+        padding: 10% 2.5% 3% 4%;
+    }
+
+    main .container .container--contents__header{
+        margin-bottom: 2em;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    main .container .container--contents__p{
+        margin-bottom: 6rem;
+        font-size: 14px;
+    }
+    
+    main .container .container--contents .container--contents__list 
+    .container--contents__list--header{
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    main .container .container--contents .container--contents__list{
+        gap: 1.5rem;
+    }
+
+    main .container .container--contents .container--contents__list 
+    .container--contents__list--item small{
+        font-size: 0.65rem;
+        margin-bottom: 3rem;
+    }
+
+    main .container .container--image .container--image__picture{
+        width: 105%;
+        background-repeat: no-repeat;
+    }
+
+    main .container .container--image .container--image__overlay{
+        width: 22.3rem;
+        height: 100%;
+    }
+
+    
+}
+
+
+@media (min-width: 980px) and (max-width: 1200px){
+    main .container .container--contents__header{
+        margin-bottom: 2em;
+        font-size: 32px;
+        font-weight: 700;
+    }
+}

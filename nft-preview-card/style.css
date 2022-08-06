@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500&display=swap');
+
+:root{
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --color-text: hsl(0, 0%, 100%);
+    --color-line: hsl(215, 32%, 27%);
+    --color-green: hsl(178, 100%, 50%);
+    --color-secondary: hsl(215, 51%, 70%);
+}
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Outfit";
+}
+
+main{
+    background-color: var(--main-bg-color);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.collection-container{
+    width: 324px;
+    height: 540px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    color: var(--color-text);
+    padding: 23px;
+}
+
+
+.hover{
+    width: 100%;
+    border-radius: 10px;
+    width: 277px;
+    height: 277px;
+    background: rgb(0, 255, 244, 0.6);
+    position: absolute;
+    top: 25px;
+    display: grid;
+    place-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+
+.collection-container .nft{
+    width: 100%;
+    border-radius: 10px;
+    width: 277px;
+    height: 277px;
+    cursor: pointer;
+    transition: hover 0.3s;
+}
+
+/*
+.collection-container .nft:hover + .hover{
+    display: grid;
+}
+*/
+
+.collection-container h3{
+    font-size: 20px;
+    margin-top: 25px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.collection-container h3:hover {
+    color: var(--color-green);
+    transition: .5s;
+}
+
+.collection-container p {
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    color: var(--color-secondary);
+}
+
+.collection-container ul{
+    list-style: none;
+}
+
+.collection-container ul li{
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.collection-container ul li:first-child{
+    color: var(--color-green);
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 94px;
+}
+
+.collection-container ul li:first-child img{
+    margin-right: 10px;
+    position: relative;
+    bottom: 3px;
+}
+
+.collection-container ul li:nth-child(2){
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.collection-container ul li:nth-child(2) img{
+    margin-right: 10px;
+    position: relative;
+    bottom: 2px;
+}
+
+.collection-container hr[type = "line"] {
+    height: 2px;
+    background-color: var(--color-line);
+    border: 0;
+    margin-top: 10px;
+}
+
+.collection-container div[type = "footer"]{
+    display: flex;
+    align-items: center;
+}
+
+.collection-container div[type = "footer"] img{
+    width: 35px;
+    border: 1px white solid;
+    border-radius: 50px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.collection-container div[type = "footer"] p span{
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.collection-container div[type = "footer"] p span:hover{
+    color: var(--color-green);
+    transition: .5s;
+}
+
+
+@media (min-width: 55em) {
+    .collection-container{
+        width: 354px;
+        height: 600px;
+    }
+
+    .collection-container .nft{
+        width: 304px;
+        height: 304px;
+        border-radius: 12px;
+    }
+
+    .hover{
+        width: 303px;
+        height: 303px;
+    }
+
+    .collection-container p {
+        font-size: 17px;
+        margin-top: 18px;
+    }
+    
+    .collection-container ul li{
+        margin-top: 25px;
+    }
+    
+    .collection-container ul li:first-child{
+        margin-right: 120px;
+    }
+
+    .collection-container hr[type = "line"] {
+        margin-top: 18px;
+    }
+    
+    .collection-container div[type = "footer"]{
+        margin-top: 10px;
+    }
+}

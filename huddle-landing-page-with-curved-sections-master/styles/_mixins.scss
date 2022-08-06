@@ -1,0 +1,22 @@
+
+@mixin center {
+    display: grid;
+    place-items: center;
+}
+
+@mixin flexLayout($direction) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin heading {
+    font-family: $heading-font;
+    font-weight: weights(large);
+}
+
+
+@mixin bg-section-top-mobile-1 {
+    background-image: $bg-section-top-mobile-1;
+}
