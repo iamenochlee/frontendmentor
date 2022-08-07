@@ -21,6 +21,7 @@ body{
     ;
     grid-auto-columns: 1fr;
 
+
     @include tablet{
         grid-template-areas: 
             'one one'
@@ -28,6 +29,15 @@ body{
             'three five' 
             'four four';
     }
+
+    
+    @media (min-width: 966px) and (max-width: 1064px) {
+        grid-template-areas: 
+            'one one'
+            'two three'
+            'four four' 
+            'five five';
+}
 
 
     @include desktop{
@@ -38,4 +48,6 @@ body{
             
         
     }
+
+    
 }

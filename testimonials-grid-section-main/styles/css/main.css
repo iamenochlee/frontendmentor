@@ -27,7 +27,12 @@ body {
     grid-template-areas: "one one" "two five" "three five" "four four";
   }
 }
-@media (min-width: 60em) {
+@media (min-width: 966px) and (max-width: 1064px) {
+  .container {
+    grid-template-areas: "one one" "two three" "four four" "five five";
+  }
+}
+@media (min-width: 67em) {
   .container {
     grid-template-areas: "one one two five" "three four four five";
   }
@@ -62,7 +67,7 @@ body {
   color: hsl(219deg, 29%, 14%);
   grid-area: one;
 }
-@media (min-width: 60em) {
+@media (min-width: 67em) {
   .card.card--one {
     background-position: 82% top;
   }
