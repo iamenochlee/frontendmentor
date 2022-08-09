@@ -6,8 +6,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/nft-preview-card-component)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/nft-preview-card-component/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/nft-preview-card-component)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/nft-preview-card-component/)
 
 ## My process
 

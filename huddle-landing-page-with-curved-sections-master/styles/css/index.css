@@ -133,6 +133,8 @@ header {
   height: auto;
   padding: calc(1em + 8px) calc(1em - 5px) calc(1em + 8px) calc(1em + 8px);
   margin-bottom: 5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 @media (min-width: 51em) {
   header {
@@ -145,6 +147,7 @@ header {
 
 p {
   font-size: 0.85rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -165,7 +168,7 @@ header .logo {
 }
 
 main {
-  background-image: url("/images/bg-section-top-mobile-1.svg");
+  background-image: url("../../images/bg-section-top-mobile-1.svg");
   background-position: bottom;
   background-size: contain;
   -o-object-fit: fill;
@@ -175,7 +178,7 @@ main {
 }
 @media (min-width: 51em) {
   main {
-    background: url("/images/bg-section-top-desktop-1.svg");
+    background: url("../../images/bg-section-top-desktop-1.svg");
     background-position: bottom;
     background-size: contain;
     -o-object-fit: fill;
@@ -210,6 +213,7 @@ main .intro h1 {
 main .intro p {
   margin-bottom: 2.5em;
   text-align: center;
+  font-weight: 600;
 }
 @media (min-width: 51em) {
   main .intro p {
@@ -246,18 +250,7 @@ main .intro .intro__image {
   main .intro .intro__image {
     width: 70%;
     max-width: 63.8em;
-    margin-bottom: calc(8em - 10px);
-    height: 49em;
-  }
-}
-@media (min-width: 35em) and (max-width: 69em) {
-  main .intro .intro__image {
-    height: auto;
-  }
-}
-@media (min-width: 1090px) and (max-width: 1200px) {
-  main .intro .intro__image {
-    height: auto;
+    margin-bottom: 8em;
   }
 }
 main .intro .intro__stats {
@@ -441,7 +434,7 @@ main .intro .intro__stats .intro__stats--message small {
 }
 
 .article__two {
-  background-image: url("/images/bg-section-bottom-mobile-2.svg"), url("/images/bg-section-top-mobile-2.svg");
+  background-image: url("../../images/bg-section-bottom-mobile-2.svg"), url("../../images/bg-section-top-mobile-2.svg");
   background-position: top, bottom;
   background-size: contain;
   width: 100%;
@@ -450,7 +443,7 @@ main .intro .intro__stats .intro__stats--message small {
 @media (min-width: 51em) {
   .article__two {
     justify-content: space-between;
-    background-image: url("/images/bg-section-bottom-desktop-2.svg"), url("/images/bg-section-top-desktop-2.svg");
+    background-image: url("../../images/bg-section-bottom-desktop-2.svg"), url("../../images/bg-section-top-desktop-2.svg");
     padding: 0 9.02%;
     padding-bottom: calc(6rem + 250px);
     flex-direction: row;
@@ -527,7 +520,7 @@ main .intro .intro__stats .intro__stats--message small {
 }
 
 .article__four {
-  background-image: url("/images/bg-section-bottom-mobile-2.svg"), url("/images/bg-footer-top-mobile.svg");
+  background-image: url("../../images/bg-section-bottom-mobile-2.svg"), url("../../images/bg-footer-top-mobile.svg");
   background-position: top, bottom;
   background-size: contain;
   -o-object-fit: fill;
@@ -538,7 +531,7 @@ main .intro .intro__stats .intro__stats--message small {
 }
 @media (min-width: 51em) {
   .article__four {
-    background-image: url("/images/bg-section-bottom-desktop-2.svg"), url("/images/bg-footer-top-desktop.svg");
+    background-image: url("../../images/bg-section-bottom-desktop-2.svg"), url("../../images/bg-footer-top-desktop.svg");
     padding: 0 9.02%;
     padding-top: calc(6rem + 220px);
     padding-bottom: -10px;
@@ -709,6 +702,8 @@ main .intro .intro__stats .intro__stats--message small {
 .footer .contact .icons .fa-brands.fa-square-twitter {
   font-size: 25px;
   padding-right: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 .footer .contact .icons .fab.fa-instagram:hover,
 .footer .contact .icons .fa-brands.fa-square-twitter:hover {
@@ -717,11 +712,12 @@ main .intro .intro__stats .intro__stats--message small {
 @media (min-width: 51em) {
   .footer .contact .icons .fab.fa-instagram,
 .footer .contact .icons .fa-brands.fa-square-twitter {
-    width: 34px;
+    font-size: 35px;
   }
 }
 .footer .contact .icons svg {
   width: 23px;
+  cursor: pointer;
   margin-right: 14px;
 }
 .footer .contact .icons svg:hover {

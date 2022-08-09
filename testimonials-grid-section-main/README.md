@@ -6,8 +6,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/testimonials-grid-section-main)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/testimonials-grid-section-main/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/testimonials-grid-section-main)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/testimonials-grid-section-main/)
 
 ## My process
 

@@ -8,8 +8,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/product-preview-card-component-main)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/product-preview-card-component-main/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/product-preview-card-component-main)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/product-preview-card-component-main/)
 
 ## My process
 

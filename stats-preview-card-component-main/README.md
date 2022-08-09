@@ -1,4 +1,4 @@
-# Frontend Mentor - order-summary-component exercise
+# Frontend Mentor - stats preview exercise
 
 ### Screenshot
 
@@ -6,8 +6,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/stats-preview-card-component-main/)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/stats-preview-card-component-main/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/stats-preview-card-component-main/)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/stats-preview-card-component-main/)
 
 ## My process
 

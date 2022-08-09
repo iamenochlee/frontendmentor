@@ -23,6 +23,8 @@ header{
     height: auto;
     padding: calc($padding-sm + 8px) calc($padding-sm - 5px) calc($padding-sm + 8px) calc($padding-sm + 8px) ;
     margin-bottom: $margin-xl;
+    font-family:'Poppins', sans-serif;
+    font-weight: 700;
     
     @include desktop{
         padding-top: 5.2%;
@@ -35,6 +37,7 @@ header{
 
 p{
     font-size: $fs-pr;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -107,6 +110,7 @@ main {
         p{
             margin-bottom: $margin-md;
             text-align: center;
+            font-weight: weights(bold);
 
             @include desktop{
                 text-align: center;
@@ -141,14 +145,7 @@ main {
             @include desktop{
                     width: 70%;
                     max-width: 63.8em;
-                    margin-bottom: calc($margin-xxl - 10px);
-                    height: 49em;
-            }
-            @include tablet{
-                height: auto;
-            }
-            @media(min-width:1090px) and (max-width:1200px){
-                height: auto;
+                    margin-bottom: $margin-xxl;
             }
         }
 
@@ -597,21 +594,23 @@ main {
             .fa-brands.fa-square-twitter{
                 font-size: 25px;
                 padding-right: 14px;
+                transition: all 0.5s;
+                cursor: pointer;
                 &:hover{
                     color: $icons-hover;
                 }
     
                 @include desktop{
-                    width: 34px;
+                    font-size: 35px;
                 }
             }
             
             svg{
                 width: 23px;
+                cursor: pointer;
                 margin-right: 14px;
-
                 &:hover{
-                    fill: $icons-hover;
+                    fill: $icons-hover; 
                 }
 
                 @include desktop{

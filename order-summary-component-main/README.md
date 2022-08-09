@@ -6,8 +6,8 @@
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/order-summary-component-main)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/order-summary-component-main/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/order-summary-component-main)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/order-summary-component-main/)
 
 ## My process
 

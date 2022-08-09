@@ -8,8 +8,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Github](https://github.com/iamenochlee/3-column-preview-card-component-main)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/3-column-preview-card-component-main/)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/3-column-preview-card-component-main)
+- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/3-column-preview-card-component-main/)
 
 ## My process
 
