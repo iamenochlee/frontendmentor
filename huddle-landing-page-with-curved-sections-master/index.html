@@ -7,6 +7,7 @@
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
   <meta name="author" content="enochlee">
   <link rel="stylesheet" href="./styles/css/index.min.css">
+  <script src="https://kit.fontawesome.com/29b632333c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 
 <!-- intro -->
 
-  <main style="background-image: url('./images/bg-section-top-mobile-1.svg');">
+  <main>
     <section class="intro">
       <h1 class="intro__title" >Build The Community Your Fans Will Love</h1>
       <p class="intro__paragraph" >Huddle re-imagines the way we build communities. You have a voice, but so does 
@@ -46,24 +47,24 @@
  
   <section>
     <article class=" article article__one">
-      <img class="article__one image" src="./images/illustration-grow-together.svg">
-      <div class="article article__one content">
+      <img class="image" src="./images/illustration-grow-together.svg">
+      <div class="content">
         <h2 class="article__title">Grow Together</h2>
         <p class="article__paragraph">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
       </div>
     </article>
 
-    <article style="background-image: url('./images/bg-section-bottom-mobile-1.svg');" class= "article article__two">
-      <img class="article__two image" src="./images/illustration-flowing-conversation.svg">
-      <div class="article article__two content">
+    <article class= "article article__two">
+      <img class=" image" src="./images/illustration-flowing-conversation.svg">
+      <div class="content">
         <h2 class="article__title">Flowing Conversations</h2>
         <p class="article__paragraph">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
       </div>
     </article>
 
-    <article class="article article__three">
-      <img class="article__three image" src="./images/illustration-your-users.svg">
-      <div class="article article__three content">
+    <article class="article article__three ">
+      <img class="image" src="./images/illustration-your-users.svg">
+      <div class=" content">
         <h2 class="article__title">Your Users</h2>
         <p class="article__paragraph" >It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
       </div>
@@ -71,8 +72,10 @@
   </section>
 
   <section class=" article article article__four">
-    <h2 class="article__title">Ready To Build Your Community?</h2>
-    <a class="article article__four btn" href="#">Get Started For Free</a>
+    <div class="content">
+        <h2 class="article__title">Ready To Build Your Community?</h2>
+        <a class="article btn" href="#">Get Started For Free</a>
+    </div>
   </section>
 
 
@@ -83,10 +86,18 @@
     <!-- contact -->
 
     <div class="contact">
-      <img class="logo" src="./images/logo.svg">
+      <img class="logo" src="./images/logo2.svg">
       <p class="footer__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
-      <div class="phone">Phone: +1-543-123-4567</div>
-      <div class="mail">example@huddle.com</div>
+      <div class="phone"><img class="phone-icon" src="./images/phone-call.svg"> Phone: +1-543-123-4567</div>
+      <div class="mail"><i class="fa-solid fa-envelope mail-icon"></i> example@huddle.com</div>
+      <div class="icons">
+      <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="48" fill="#fff" height="48" viewBox="0 0 48 48">
+      <title>facebook</title>
+      <path d="M0 44c0 2.21 1.79 4 4 4h40c2.21 0 4-1.79 4-4l-0-40c0-2.21-1.79-4-4-4h-40c-2.21 0-4 1.79-4 4v40zM25 42v-16h-4v-6h4c0-10.31 0.439-11 13-11v6c-6.62 0-6 0.37-6 5h6v6h-6v16h-7z"></path>
+      </svg>
+        <i class="fab fa-instagram"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+      </div>
     </div>
 
     <!-- cta -->
@@ -96,15 +107,19 @@
       <p class="footer__paragraph">
         To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
       </p>
-      <form action="#">
-        <input type="text">
-        <button class="cta__button">Subscribe</button>
+      <form id="form" action="#" method="get">
+        <div>
+          <input id="form-email" class="cta__input" name="email" onkeyup="emailInputValidation()">
+        </div>
+        <div>
+          <button type="submit" class="cta__button">Subscribe</button>
+        </div>
       </form>
+      <div id="form-error" style="color: hsl(0, 100%, 63%); font-size: 0.65rem; margin-top: 5px;"></div>
     </div>
   </footer>
 
-  <aside>
-    hiiiiiiiiiiiiii
-  </aside>
+
+  <script src="main.js"></script>
 </body>
 </html>

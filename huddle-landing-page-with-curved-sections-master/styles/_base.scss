@@ -1,29 +1,40 @@
 //primary
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     height: auto;
     font-size: 15px;
+    box-sizing: border-box;
     font-family:'Poppins','Open Sans', sans-serif;
-    
+    scroll-behavior: smooth;
 }
 
+::selection{
+    color: $pink;
+    background-color: grey;
+    border-radius: 10px;
+}
 
 header{
     width: 100%;
     height: auto;
-    padding: $padding-pr;
+    padding: calc($padding-sm + 8px) calc($padding-sm - 5px) calc($padding-sm + 8px) calc($padding-sm + 8px) ;
+    margin-bottom: $margin-xl;
+    
+    @include desktop{
+        padding-top: 5.2%;
+        padding-left: 5.2%;
+        padding-right: 5.2%;
+        margin-bottom: calc($margin-base - 30px);
+    }
 }
 
-h1{
-    font-size: $fs-lg;
-}
 
 p{
     font-size: $fs-pr;
-}
-
-img{
-    width: 90%;
 }
 
 
@@ -36,12 +47,16 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $margin-xxl;
     padding-bottom: 0;
 
     .logo{
         width: 100px;
         height: 20px;
+
+        @include desktop{
+            width: 16em;
+            height: 40px;
+        }
 
     }
 }
@@ -49,10 +64,21 @@ header{
 //intro
 
 main{
-    background: no-repeat;
+    background-image: $bg-section-top-mobile-1;
     background-position: bottom;
     background-size: contain;
     object-fit: fill;
+    background-repeat: no-repeat;
+    padding: $padding-md;
+
+    @include desktop{
+        background: $bg-section-top-desktop-1 ;
+        background-position: bottom;
+        background-size: contain;
+        object-fit: fill;
+        background-repeat: no-repeat;
+        padding-bottom: $padding-base;
+    }
 }
 
 
@@ -62,26 +88,97 @@ main {
 
         h1{
             font-size: $fs-lg;
-            margin-bottom: $margin-pr;
+            margin-bottom: $margin-sm;
+            font-weight: weights(large);
+            text-align: center;
+            
+            @include desktop {
+                font-size: calc($fs-xxl - .3rem);
+                font-weight: weights(large);
+                margin-bottom: calc($margin-sm - 30px);
+            }
+
+            @include tablet {
+                font-size: calc($fs-xxl - 1.5rem);
+                margin-bottom: $margin-sm;
+            }
+            
         }
         p{
-            margin-bottom: $margin-xl;
+            margin-bottom: $margin-md;
+            text-align: center;
+
+            @include desktop{
+                text-align: center;
+                font-size: 20px;
+                padding: 0 25%;
+            }
+
+            @include tablet{
+                padding: 0 5%
+            }
         }
 
         .btn{
+            display: inline-flex;
+            margin: 0 auto;
             margin-bottom: $margin-xxl;
             text-decoration: none;
+            box-shadow: -3px 3px 14px -5px rgba(128,128,128,0.27);
+            -webkit-box-shadow: -3px 10px 14px -5px rgba(128,128,128,0.27);
+            -moz-box-shadow: -3px 10px 14px -5px rgba(128,128,128,0.27);
+
+            @include desktop {
+                display: block;
+                margin-bottom: calc($margin-xl + 10px)
+            }
+            
         }
         .intro__image{
+            width: 100%;
             margin-bottom: $margin-xxl;
+
+            @include desktop{
+                    width: 70%;
+                    max-width: 63.8em;
+                    margin-bottom: calc($margin-xxl - 10px);
+                    height: 49em;
+            }
+            @include tablet{
+                height: auto;
+            }
+            @media(min-width:1090px) and (max-width:1200px){
+                height: auto;
+            }
         }
 
         .intro__stats{
             position: relative;
+
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 17%;
+            }
+
+            @include tablet {
+                padding: 0 10%;
+            }
+            
             .intro__stats--communities{
                 margin-bottom: 5.625rem;
+                img{
+                    @include desktop{
+                        width: 40px;
+                        right: 90px;
+                    };
+                }
                 small{
                     font-size: calc($fs-md - 5px);
+
+                    @include desktop{
+                        font-size: calc($fs-lg - 1px);
+                    }
                 }
             }
             .intro__stats--message,
@@ -95,21 +192,63 @@ main {
                 width: 30px;
                 position: relative;
                 right: 55px;
+
+                @include desktop{
+                    width: 40px;
+                    max-width: 50px;
+                    right: 100px;
+                }
+
+                @include tablet {
+                    width: 50px;
+                    left: -50px;
+                }
             }
             span{
                 font-size: $fs-xxl;
                 font-weight: weights(large);
                 display: block;
+
+                @include desktop{
+                    font-size: $fs-base;
+                }
+                @include tablet {
+                    font-size: $fs-xxl;
+                }
             }
 
             .intro__stats--message{
 
                 span{font-size: calc($fs-xxl - 10px);
+                    @include desktop {
+                        font-size: $fs-base;
+                    }
+                    @include tablet {
+                        font-size: $fs-xxl;
+                    }
+
+                }
+
+                @include desktop {
+                    img{
+                        right: 110px;
+                    }
+                }
+
+                @include tablet {
+                    img{
+                        right: 60px;
+                    }
                 }
                 small{
                     display: inline-flex;
                     font-size: $fs-pr;
-                    margin-bottom:calc($margin-xxl + 50px );
+                    margin-bottom:$margin-xxl;
+
+                    @include desktop{
+                        font-size: calc($fs-lg - 1px);
+                        margin-bottom: 0;
+                    }
                 }
             }
 
@@ -127,40 +266,363 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: $padding-sm;
+
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12%;
+        padding: 0;
+    }
+
+    h2{
+        margin-bottom: 25px;
+    }
     
-}
-
-.article__one{
-    background-color: $clr-text;
-    padding-top: $padding-xl;
-}
-
-.image{
-    width: 85%;
-    margin-bottom: calc($margin-xl + 8px);
 }
 
 .content{
     text-align: center;
+    
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        font-size: calc($fs-xl - 3px);
+    }
     p{
         font-size: $fs-sm;
+        @include desktop {
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: weights(bold);
+        }
+    }
+}
+
+
+.article__one{
+    background-color: $clr-text;
+    padding-top: calc($padding-md - 10px);
+    padding-bottom: calc($padding-xl - 10px);
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+
+    @include desktop{
+        padding: 0 9.02%;
+        padding-bottom: $fs-xxl;
+        flex-direction: row-reverse;
+    }
+
+    .content, 
+    .image{
+        @include desktop{
+            margin-top: 3em;
+        }
+    }
+}
+
+
+.image{
+    width: 85%;
+    margin-bottom: $margin-sm;
+
+    @include desktop{
+        width: 45%;
     }
 }
 
 .article__two{
-    background: no-repeat;
-    background-position: top;
+    background-image: $bg-section-bottom-mobile-2, $bg-section-top-mobile-2;
+    background-position: top, bottom;
     background-size: contain;
-    object-fit: fill;
+    width: 100%;
+    background-repeat: no-repeat, no-repeat;
+
+    @include desktop {
+        justify-content: space-between;
+        background-image: $bg-section-bottom-desktop-2, $bg-section-top-desktop-2;
+        padding: 0 9.02%;
+        padding-bottom: calc($fs-base + 250px);
+        flex-direction: row;
+        gap: 20%;
+    }
+
+    .image{
+        padding-top: calc($padding-xl + 65px);
+        margin-bottom: $margin-xl;
+
+        @include desktop {
+            padding-top: calc($padding-xl + 250px);
+            width: 10px;
+            width: 34%;
+            max-width: 500px;
+            margin-bottom: 3em;
+        }
+    }
+
+    .content{
+        margin-bottom: calc($margin-xxl + 6.125rem);
+        @include desktop{
+            margin-bottom: 0;
+            padding-top: calc($padding-xl + 250px);
+        }
+    }
 }
 
-// main section {
+.article__three{
+    background-color: $clr-text;
+    padding-bottom: $padding-sm;
+    flex-direction: column;
+
+    @include desktop{
+        flex-direction: row-reverse;
+        padding: 0 9.02%;
+        padding-bottom: $fs-xl;
+        gap: 20%;
+    }
+
+    @include tablet{
+        padding: 0 9%;
+        gap: 6%;
+    }
+
     
-// }
+    .image{
+        padding-top: calc($padding-xl + 65px);
+        margin-bottom: $margin-xl;
+
+        @include desktop {
+            width: 100%;
+            max-width: 500px;
+            padding-top : $padding-md;
+            margin-bottom: 0;
+        }
+
+        @include tablet{
+            width: 50%;
+        }
+    }
+
+    .content{
+        margin-bottom: $margin-xl;
+        @include desktop{
+            margin-bottom: 0;
+            padding-top : 0;
+        }
+    }
+}
+
+.article__four{
+    background-image: $bg-section-bottom-mobile-2, $bg-footer-mobile;
+    background-position: top, bottom;
+    background-size: contain;
+    object-fit: fill;
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    display: block;
+
+    @include desktop{
+        background-image: $bg-section-bottom-desktop-2, $bg-footer-desktop;
+        padding: 0 9.02%;
+        padding-top: calc($fs-base + 220px);
+        padding-bottom: -10px;
+    }
+    
+    .content{
+        margin-top: calc($padding-xl + 90px);
+        
+        @include desktop{
+            display: block;
+            text-align: center;
+            margin-top: 0;
+        }
+        
+
+        h2{
+            margin-bottom: calc($margin-md - 10px);
+            text-align: center;
+
+            @include desktop{
+                margin-bottom: $margin-sm
+            }
+        }
+        .article.btn{
+            text-align: center;
+            display: inline-flex;
+            margin-bottom:calc($margin-base + 74px );
+            text-decoration: none;
+            box-shadow: -3px 10px 14px -5px rgba(128,128,128,0.27);
+            -webkit-box-shadow: -3px 10px 14px -5px rgba(128,128,128,0.27);
+            -moz-box-shadow: -3px 10px 14px -5px rgba(128,128,128,0.27);
+
+            @include desktop{
+                margin-bottom: calc($margin-base + 30px);
+            }
+        }
+    }
+}
 
 
-aside{
-    @include bg-section-top-mobile-1;
-    width: 700px;
-    height: 400px;
+//footer
+
+.footer{
+    background-color: $clr-title;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: calc($padding-md - 10px);
+    padding-top: $padding-lg;
+
+    @include desktop{
+        flex-direction: row;
+        gap: 4em;
+        padding: 0 9.02%;
+        padding-top: calc($padding-xxl + 20px);
+        padding-bottom: $padding-xxl;
+        gap: 22%;
+    }
+
+    @media(min-width:1090px) and (max-width:1200px){
+        gap: 10em;
+    }
+
+
+    .cta{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-bottom: calc($margin-xl + 18px);
+
+        h3{
+            text-transform: uppercase;
+            font-size: $fs-md;
+            margin-bottom: $margin-sm;
+            
+            @include desktop{
+                font-size: $fs-lg;
+            }
+        }
+        p{
+            font-size: $fs-pr;
+            line-height: 1.6;
+            margin-bottom: calc($margin-md);
+
+            @include desktop{
+                margin-bottom: $margin-md;
+                max-width: 25em;
+                line-height: 1.8;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            
+            @include desktop{
+                flex-direction: row;
+                gap: 2em;
+                justify-content: center;
+                align-items: center;
+            }
+            @include tablet{
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            input{
+                margin-bottom: $margin-pr;
+
+                @include desktop{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .contact{
+        color: white;
+        
+        .logo{
+            width: 200px;
+            height: 35px;
+            margin-bottom: $margin-sm;
+
+            @include desktop{
+                width: 16em;
+                margin-bottom: $margin-pr;
+            }
+        }
+        p{
+            margin-bottom: $margin-md;
+
+            @include desktop{
+                line-height: 1.6;
+            }
+        }
+
+        .phone,
+        .mail{
+            margin-bottom: $margin-sm;
+            display: flex;
+            align-items: center;
+        }
+
+        .mail{
+            margin-bottom: $margin-md;
+
+            @include desktop{
+                margin-bottom: $margin-xl;
+            }
+        }
+
+        .phone-icon{
+            width: 22px;
+            margin-right: 14px;
+        }
+        .mail-icon{
+            font-size: 22px;
+            margin-right: 14px;
+        }
+
+
+        .icons{
+            display: flex;
+            align-items: center;
+            padding-right: 14px;
+            margin-bottom: $margin-md;
+            .fab.fa-instagram,
+            .fa-brands.fa-square-twitter{
+                font-size: 25px;
+                padding-right: 14px;
+                &:hover{
+                    color: $icons-hover;
+                }
+    
+                @include desktop{
+                    width: 34px;
+                }
+            }
+            
+            svg{
+                width: 23px;
+                margin-right: 14px;
+
+                &:hover{
+                    fill: $icons-hover;
+                }
+
+                @include desktop{
+                    width: 34px;
+                }
+            }
+        }
+
+
+        
+    }
+
+
 }

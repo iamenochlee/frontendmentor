@@ -15,50 +15,72 @@ button{
 
 
 //buttons
-.btn{
+.btn,
+.article.btn{
     font-size: $fs-pr;
-    padding: 0.9em 2.55em;
+    padding: 0.8em 2.43em;
     background-color: $pink;
     color: white;
     border: 0;
     border-radius: 25px;
     transition: all 0.05s;
     display: inline-flex;
+    transition: all 0.5s;
+    
 
     &:hover,
     &:focus{
         background-color: $clr-light-pink;
     }
+
+    @include desktop {
+        padding: 1.2em 5em;
+        max-width: 25em;
+        border-radius: 50px;
+        font-size: $fs-md;
+    }
+
+    @include tablet{
+        padding: 1.4em 3em;
+        font-size: $fs-pr;
+    }
 }
 
 .outlined--btn{
     font-size: $fs-sm;
-    padding: .5em 3em;
+    padding: .15em 0.5em;
     text-transform: capitalize;
     background-color: transparent;
-    border: 2px solid $pink;
-    border-radius: 25px;
+    border: 1px solid $pink;
     color: $pink;
     border-radius: 25px;
-    box-shadow: -3px 12px 29px -4px rgba(158,144,144,0.75);
-    -webkit-box-shadow: -3px 12px 29px -4px rgba(158,144,144,0.75);
-    -moz-box-shadow: -3px 12px 29px -4px rgba(158,144,144,0.75);
+    cursor: pointer;
+    box-shadow: -3px 3px 12px -5px rgba(128,128,128,0.27);
+    -webkit-box-shadow: -3px 3px 12px -5px rgba(128,128,128,0.27);
+    -moz-box-shadow: -3px 3px 12px -5px rgba(128,128,128,0.27);
+    transition: all 0.5s;
 
     &:hover,
     &:focus{
         border-color: $clr-light-pink;
         color: $clr-light-pink;
     }
+
+    @include desktop{
+        padding: .6em 2.7em;
+        max-width: 11.5em;
+    }
 }
 
 .cta__button {
-    padding: 1.125em 2.5em;
+    padding: 1.2em 4em;
     border-radius: 5px;
     background-color: $pink;
     color: white;
     outline: none;
     border: none;
     transition: all 0.05s;
+    cursor: pointer;
 
     &:hover,
     &:focus{
@@ -69,11 +91,24 @@ button{
 
 //cta
 
-.cta__input{
+div .cta__input{
     outline: none;
     border: none;
     border-radius: 5px;
-    padding-left: 5px;
+    padding: 0px 15px;
     background-color: white;
-    width: 20.3125em 3.375em;
+    max-width: 19rem;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid white;
+
+    &:hover,
+    &:active,
+    &:focus{
+        border-color:$clr-light-red;
+    }
+
+    @include desktop{
+        width: 19rem;
+    }
 }
