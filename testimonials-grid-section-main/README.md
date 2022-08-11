@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-![](/styles/images/Frontend%20Mentor%20_%20Testimonial%20Grid%20Layout.png)
+![](./styles/images/Frontend%20Mentor%20_%20Testimonial%20Grid%20Layout.png)
 
 ### Links
 
