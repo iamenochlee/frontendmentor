@@ -1,4 +1,4 @@
-# Frontend Mentor - order-summary-component exercise
+# Frontend Mentor - Testimonials-grid-section-main
 
 ### Screenshot
 
