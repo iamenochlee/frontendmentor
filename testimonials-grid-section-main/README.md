@@ -1,8 +1,8 @@
-# Frontend Mentor - order-summary-component exercise
+# Frontend Mentor - Testimonials-grid-section-main
 
 ### Screenshot
 
-![](/styles/images/Frontend%20Mentor%20_%20Testimonial%20Grid%20Layout.png)
+![](./styles/images/Frontend%20Mentor%20_%20Testimonial%20Grid%20Layout.png)
 
 ### Links
 
