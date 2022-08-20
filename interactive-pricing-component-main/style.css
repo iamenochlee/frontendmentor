@@ -1,0 +1,360 @@
+:root{
+    --bg-color: hsl(230, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+    --color-text: hsl(225, 20%, 60%);
+    --slider-main-bg: hsl(224, 65%, 95%);
+    --slider-fill: hsl(174, 77%, 80%);
+    --slider-color: hsl(174, 86%, 45%);
+    --checkbox-bg-color: hsl(223, 50%, 87%);
+    --dark-blue: hsl(227, 35%, 25%);
+    --discount-bg:hsl(14, 92%, 95%);
+    --discount-text: hsl(15, 100%, 70%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("./images/pattern-circles.svg") top 10% right 50% no-repeat, 
+                url("./images/bg-pattern.svg")no-repeat
+                var(--bg-color);
+    background-size: 145px, 100% 60vh;
+    position: relative;
+    font-family: 'Manrope';
+}
+
+@media (max-width: 600px) {
+    .container{
+        padding-top: 4em;
+    }
+
+}
+
+.container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width: 600px) {
+    .container{
+        max-width: 90%;
+    }
+
+}
+
+
+h1{
+    margin-bottom: 0.5em;
+    color: var(--dark-blue);
+    font-size: clamp(1.2rem, 1vw, 1.75rem);
+}
+p{
+    margin-bottom: 60px;
+    color: var(--color-text);
+    font-size: clamp(12px, 2vw,15px);
+}
+@media (max-width: 600px) {
+    p{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+}
+
+.card{
+    width: 540px;
+    height: auto;
+    background-color: var(--white);
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-inline: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 14px 17px rgba(0, 0, 0, 0.1)
+}
+@media (max-width: 600px) {
+    .card{
+        width: 80vw;
+        height: auto;
+    }
+
+}
+
+
+.card__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.7em;
+}
+
+@media (max-width: 600px) {
+    .card__content{
+        flex-direction: column;
+        gap: 5em;
+        margin-bottom: 0.4em;
+    }
+
+}
+
+.card--header{
+    font-size: clamp(0.7rem, 0.4vw, 0.9rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text);
+}
+.card__content h3{
+    font-size: 1rem;
+    color: var(--color-text);
+}
+span{
+    font-size: clamp(2em, 2.2vw, 2.5em);
+    position: relative;
+    top: 4px;
+    color: var(--dark-blue);
+}
+
+
+
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    width: 100%;
+    border-radius: 5px;
+    background: var(--slider-main-bg);
+    outline: none;
+    border: none;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    input{
+        position: relative;
+        top: -95px;
+        margin-bottom: 0px;
+    }
+
+}
+
+input[type="range"]::-moz-range-track {  
+    border: none;
+    outline: none;
+  }
+
+input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--slider-color) ;
+    background-image: url("./images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 1px 15px 15px var(--slider-fill);
+}
+
+input::-moz-range-thumb{
+    -moz-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:  var(--slider-color);
+    background-image: url("./images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 1px 15px 15px var(--slider-fill);
+}
+
+input::-moz-range-thumb:hover,
+input::-moz-range-thumb:focus,
+input::-moz-range-thumb:active{
+    background-color: hsl(174, 86%, 33%);
+}
+
+input::-moz-range-progress{
+    background-color: var(--slider-fill);
+    outline: none;
+    border: none;
+    height: 8px;
+}
+
+
+.card-pricing{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 3em;
+}
+
+@media (max-width: 600px) {
+    .card-pricing{
+        justify-content: center;
+        margin-bottom: 2.4em;
+    }
+
+}
+
+.checkbox{
+    width: 40px;
+    height: 22px;
+    background-color:var(--checkbox-bg-color) ;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.checkbox:hover,
+.checkbox:focus,
+.checkbox:active{
+    background-color: var(--slider-fill);
+}
+
+.check{
+    width: 16px;
+    height: 16px;
+    background-color: var(--white);
+    z-index: 2;
+    border-radius: 50%;
+    
+}
+
+h3{
+    font-size: clamp(10px, 1vw, 12px);
+    color: var(--color-text);
+}
+
+.discount{
+    background-color:var(--discount-bg) ;
+    width: auto;
+    height: auto;
+    padding: 3px 6px;
+    border-radius: 6px ;
+    display: inline-block;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .discount{
+        width: 30px;
+        padding-top: 1px;
+        padding-inline: 1px;
+        height: 16px;
+    }
+
+}
+
+#discount{
+    font-size: 9px;
+    text-align: center;
+    color: var(--discount-text);
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .card-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+ul{
+    list-style: none;
+    text-align: start;
+}
+
+@media (max-width: 600px) {
+    ul{
+        margin-bottom: 2em;
+    }
+
+}
+
+li{
+    font-size: 0.75rem;
+    color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+    li{
+        text-align: center;
+    }
+
+}
+
+
+li ~ li{
+    margin-top: 10px;
+}
+
+li::before{
+    content: url('./images/icon-check.svg');
+    padding-right: 10px;
+}
+
+a{
+    background-color: var(--dark-blue);
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 1em 3.4em;
+    font-size: 0.8rem;
+    color: hsl(226, 100%, 87%);
+    transition: all .07s;
+}
+
+@media (max-width: 600px) {
+    a{
+        padding: 0.9em 3.2em;
+    }
+
+}
+
+
+a:hover,
+a:focus,
+a:active{
+    color: var(--white);
+}
+
+hr{
+    width: 120%;
+    position: relative;
+    right: 50px;
+    border: 1px solid var(--slider-main-bg);
+    margin-bottom: 2em;
+}
+
+@media (max-width: 600px) {
+    hr{
+        margin-bottom: 1.8em;
+    }
+
+}
