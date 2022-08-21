@@ -95,6 +95,7 @@ const disableDarkMode = () => {
 // start things off with it on
 if (darkMode === 'enabled') {
   enableDarkMode();
+  darkModeToggle.src = "./images/sun-solid.svg";
 }
 
 // When someone clicks the button

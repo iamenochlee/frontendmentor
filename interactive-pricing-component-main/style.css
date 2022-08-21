@@ -26,6 +26,8 @@
     --discount-text: hsl(15, 100%, 70%);
 }
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -52,6 +54,14 @@
     margin-right: 5em;
     margin-block: 1em;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #dark-mode-toggle{
+        height: 30px;
+        margin-right: 3em;
+    }
+
 }
 
 body{
