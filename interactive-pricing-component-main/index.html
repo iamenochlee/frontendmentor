@@ -12,25 +12,31 @@
 </head>
 <body>
 
+  <img id="dark-mode-toggle" src="./images/sun-solid.svg">
+
+
   <main class="container">
     <h1>Simple, traffic-based pricing</h1>
     <p>Sign-up for our 30-day trial. No credit card required.</p>
     <div class="card">
         <div class="card__content">
-          <h2 class="card--header">100k Pageviews</h2>
-          <h3><span>$16.00</span> /month</h3>
+          <h2 class="card--header"><small id="pageView">100k</small> Pageviews</h2>
+          <h3>
+            <span id="price">$16.00</span>
+            <span id="billing">/month</span>
+          </h3>
         </div>
         
-        
-
-        
-            <input min="0" max="200" type="range" name="slider" class="slider" steps="1">
+        <input min="1" max="5" type="range" name="slider" class="slider" value="3">
         
       <div class="card-pricing">
         <h3>Monthly Billing</h3>
-        <div class="checkbox">
-          <div class="check"></div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox" class="checkbox-container"></label>
         </div>
+
+        
         <h3>Yearly Billing</h3>
         
         <div class="discount">
@@ -52,6 +58,8 @@
 
 
   
+
+<script src="./main.js"></script>
   
 </body>
 </html>
