@@ -12,7 +12,7 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 
 ### Links
 
-- Solution URL: [Github]()
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/tree/master/interactive-pricing-component-main)
 - Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/interactive-pricing-component-main/)
 
 ## My process
