@@ -15,7 +15,7 @@ setInterval(slider.oninput = function priceComponents(){
         billing.innerHTML = "/month";
 
         if (discountBtn.checked == true){
-            price.innerHTML = '$' + '4.5';
+            price.innerHTML = '$' + '54.00';
             billing.innerHTML = "/year";
         }
     }
@@ -26,7 +26,7 @@ setInterval(slider.oninput = function priceComponents(){
         billing.innerHTML = "/month";
 
         if (discountBtn.checked == true){
-            price.innerHTML = '$' + '9.00';
+            price.innerHTML = '$' + '108.00';
             billing.innerHTML = "/year";
         }
     }
@@ -37,7 +37,7 @@ setInterval(slider.oninput = function priceComponents(){
         billing.innerHTML = "/month";
 
         if (discountBtn.checked == true){
-            price.innerHTML = '$' + '12.00';
+            price.innerHTML = '$' + '144.00';
             billing.innerHTML = "/year";
         }
     }
@@ -48,7 +48,7 @@ setInterval(slider.oninput = function priceComponents(){
         billing.innerHTML = "/month";
 
         if (discountBtn.checked == true){
-            price.innerHTML = '$' + '18.00';
+            price.innerHTML = '$' + '216.00';
             billing.innerHTML = "/year";
         }
     }
@@ -59,7 +59,7 @@ setInterval(slider.oninput = function priceComponents(){
         billing.innerHTML = "/month";
 
         if (discountBtn.checked == true){
-            price.innerHTML = '$' + '27.00';
+            price.innerHTML = '$' + '324.00';
             billing.innerHTML = "/year";
         }
     }
