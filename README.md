@@ -1,6 +1,6 @@
 # frontendmentor
 
-A repository of all my exercise from frontendmentor.
+A collection repository of all my Frontend Mentor challenge solutions. 
 
 
 ### Author
