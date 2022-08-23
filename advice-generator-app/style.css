@@ -39,12 +39,15 @@ body{
     padding-top: 2em;
     text-align: center;
     position: relative;
-    min-height: 300px;
 }
 
 @media (min-width: 55em) {
     .advice-container{
-        margin-block: 10em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
 }
 
@@ -98,9 +101,12 @@ body{
     transition: transform 0.3s;
 }
 
+
 @media (min-width: 35em) {
     #advice-generator{
-        left: 43.5%;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
     }
 }
 
