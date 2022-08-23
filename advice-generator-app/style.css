@@ -1,0 +1,167 @@
+:root{
+    --very-dark-blue: hsl(218, 23%, 16%);
+    --dark-blue:  hsl(217, 19%, 24%);
+    --grey-blue: hsl(217, 19%, 38%);
+
+
+    --bg-color: var(--very-dark-blue);
+    --container-bg-color: var(--dark-blue);
+    --color-text: hsl(193, 38%, 86%);
+    --accent-color: hsl(150, 100%, 66%);
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url("./src/fonts/Manrope-Medium.ttf"),
+        url("./src/fonts/Manrope-Medium.ttf"),
+        url("./src/fonts/Manrope-ExtraBold.ttf"),
+        url("./src/fonts/Manrope-Medium.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Manrope', sans-serif;
+}
+
+
+.advice-container{
+    background-color: var(--container-bg-color);
+    width: min(90%, 550px);
+    margin-block-start: max(9em, 10vh);
+    margin-inline: auto;
+    border-radius: 0.8rem;
+    padding-top: 2em;
+    text-align: center;
+    position: relative;
+    min-height: 300px;
+}
+
+@media (min-width: 55em) {
+    .advice-container{
+        margin-block: 10em;
+    }
+}
+
+#advice-no{
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+    color: var(--accent-color);
+}
+
+#advice{
+    padding-inline: 5%;
+    align-self: center;
+    font-size: clamp(1.58rem, 3vw + 0.1rem, 1.75rem);
+    line-height: 1.4;
+    font-weight: 800;
+    margin-bottom: 1.5em;
+    color: var(--color-text);
+}
+
+@media (min-width: 55em) {
+    #advice{
+        padding-inline: 8.5%;
+    }
+}
+
+.break{
+    width: 85%;
+    margin-bottom: 3.8em;
+}
+
+@media (min-width: 55em) {
+    .break{
+        content: url("./src/images/pattern-divider-desktop.svg");
+    }
+}
+
+#advice-generator{
+    width: 65px;
+    height: 65px;
+    background-color: var(--accent-color);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    left: 42.5%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+@media (min-width: 35em) {
+    #advice-generator{
+        left: 43.5%;
+    }
+}
+
+
+#advice-generator:hover,
+#advice-generator:focus{
+    box-shadow: 1px 1px 25px var(--accent-color);
+    transform: translateY(-5px);
+}
+
+#advice-generator:active,
+#advice-generator:target{
+    animation: loadingAdvice 0.7s ease 0.3s infinite;
+}
+
+@keyframes loadingAdvice {
+    0%{
+        transform: rotate(0deg) scale(0.7);
+    }
+
+    30%{
+        transform: rotate(90deg) scale(0.8);
+    }
+
+    60%{
+        transform: rotate(180deg) scale(0.9);
+    }
+
+    100%{
+        transform: rotate(270deg) scale(1);
+    }
+}
+
+
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+0% {
+    background-color: hsl(217, 20%, 40%);
+}
+100% {
+    background-color: hsl(217, 19%, 24%);
+}
+}
+  
+#advice-no .skeleton--text{
+    margin-top: 0.5em;
+    width: 30%;
+    height: 1rem;
+    margin-inline: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.skeleton--paragraph {
+    width: 90%;
+    margin-inline: auto;
+    height: 150px;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
+}
+  
