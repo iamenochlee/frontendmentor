@@ -33,7 +33,7 @@ body{
 .advice-container{
     background-color: var(--container-bg-color);
     width: min(90%, 550px);
-    margin-block-start: max(9em, 10vh);
+    margin-block-start: 13em;
     margin-inline: auto;
     border-radius: 0.8rem;
     padding-top: 2em;
@@ -96,19 +96,13 @@ body{
     border-radius: 50%;
     position: absolute;
     bottom: -30px;
-    left: 42.5%;
     cursor: pointer;
     transition: transform 0.3s;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
 }
 
-
-@media (min-width: 35em) {
-    #advice-generator{
-        left: 0;
-        right: 0;
-        margin-inline: auto;
-    }
-}
 
 
 #advice-generator:hover,
