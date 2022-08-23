@@ -20,6 +20,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ### Built with
 
+- Semantic HTML
 - CSS custom properties
 - CSS Flexbox
 - Vanilla Javascript
