@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <div>
+    <img id="dark-mode-toggle" src="./images/sun-solid.svg" alt="my_image">
+    </div>
+  <main>
+    <article class="flex">
+      <img src="./images/logo.svg" alt="fylo logo" class="logo">
+      <div class="icon--container">
+        <div class="icon">
+          <img src="./images/icon-document.svg" alt="document icon">
+        </div>
+
+        <div class="icon">
+          <img src="./images/icon-folder.svg" alt="folder icon">
+        </div>
+
+        <div class="icon">
+          <img src="./images/icon-upload.svg" alt="upload icon">
+        </div>
+      </div>
+    </article>
+
+    <article class="flex">
+      <p>You’ve used 815 GB of your storage</p>
+      <div class="rage--container">
+        <div class="range--slider">
+          <div class="range"></div>
+        </div>
+      </div>
+      <div class="range--value">
+        <small>0 GB</small>
+        <small>1000 GB</small>
+      </div>
+      <p><span>185</span>GB Left</p>
+    </article>
+
+  </main>
+ 
+  <script src="./main.js"></script>
+</body>
+</html>

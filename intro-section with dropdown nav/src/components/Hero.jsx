@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroImageDesktop from "../images/image-hero-desktop.png";
 import HeroImageMobile from "../images/image-hero-mobile.png";
 import DatabizLogo from "../images/client-databiz.svg";
 import AudiophileLogo from "../images/client-audiophile.svg";
@@ -23,7 +22,6 @@ function Hero() {
             </section>
 
             <section className="hero__image">
-                    <img className="hero__image--desktop" src={HeroImageDesktop} alt="img" />
                     <img className="hero__image--mobile" src={HeroImageMobile} alt="img" />
             </section>
 
