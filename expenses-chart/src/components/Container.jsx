@@ -6,7 +6,7 @@ export default function Container() {
 
   useEffect(() => {
     const handleDataFetch = async () => {
-      await fetch("../src/data.json")
+      await fetch("/data.json")
         .then((response) => response.json())
         .then((data) => setExpenses(data));
     };
@@ -22,7 +22,7 @@ export default function Container() {
             day={expense.day}
             amount={expense.amount}
             key={index}
-            id={index - 6}
+            id={index + 1}
           />
         ))}
       </div>
