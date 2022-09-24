@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,800;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+:root {
+  --padding-sm: 1em;
+  --padding-pr: 2em;
+  --padding-base: 2.5em;
+  --padding-md: 5.625em;
+  --padding-lg: 7em;
+  --padding-xl: 7.4em;
+  --padding-xxl: 12.9em;
+
+  --margin-sm: 1.25em;
+  --margin-base: 1rem;
+  --margin-md: 1.625em;
+  --margin-pr: 2em;
+  --margin-lg: 5em;
+  --margin-xl: 9.75em;
+  --margin-xxl: 12em;
+
+  --fs-sm: 14px;
+  --fs-base: 1rem;
+  --fs-pr: 1.25rem;
+  --fs-md: 2em;
+  --fs-name: 3.5rem;
+  --fs-lg: 5rem;
+  --fs-xl: 9.375em;
+
+  --circle: 50%;
+  --br-sm: 4px;
+
+  --ls-space: 2.7px;
+  --ls-space-md: 3.38px;
+
+  --bg-clr: rgba(255, 255, 255, 0.04);
+  --white: #fff;
+
+  --ts-clr: rgba(196, 192, 192, 0.04);
+  --ts-blur: blur(30px) saturate(100%) brightness(100%);
+}
