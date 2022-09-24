@@ -1,30 +1,23 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import Chart from "./Chart";
 
-
 export default function Container() {
+  const [expenses, setExpenses] = useState([]);
 
-  const [expenses, setExpenses] = useState([])
-
-
-  useEffect(()=> {
-    const handleDataFetch = async() => {
-      await fetch('../src/data.json')
-      .then((response) => response.json())
-      .then((data) => setExpenses(data));
-      
-    }
+  useEffect(() => {
+    const handleDataFetch = async () => {
+      await fetch("../src/data.json")
+        .then((response) => response.json())
+        .then((data) => setExpenses(data));
+    };
     handleDataFetch();
-  }, [])
-
-
+  }, []);
 
   return (
-  
     <main>
       <h2>{`Spending - Last ${expenses?.length} days`}</h2>
-      <div className="wrapper">{
-        expenses.map((expense, index) => (
+      <div className="wrapper">
+        {expenses.map((expense, index) => (
           <Chart
             day={expense.day}
             amount={expense.amount}
@@ -44,5 +37,5 @@ export default function Container() {
         </div>
       </div>
     </main>
-  )
+  );
 }
