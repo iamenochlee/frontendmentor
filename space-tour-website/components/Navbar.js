@@ -49,6 +49,7 @@ export default function Navbar() {
         <div ref={node}>
           <button
             className={classes.button}
+            aria-labelledby="navbarNav"
             aria-controls="navbarNav"
             aria-expanded={shown ? "true" : "false"}
             onClick={() => setShown(!shown)}
@@ -65,7 +66,8 @@ export default function Navbar() {
             />
           </button>
           <ul
-            aria-labelledby="navbarNav"
+            id="navbarNav"
+            aria-label="navbarNav"
             className={classes.menu}
             style={{
               left: !shown ? "100%" : "25%",
