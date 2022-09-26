@@ -80,10 +80,22 @@ select {
 
   --ls-space: 2.7px;
   --ls-space-md: 3.38px;
+  --ls-space-lg: 4.75px;
 
   --bg-clr: rgba(255, 255, 255, 0.04);
   --white: #fff;
 
   --ts-clr: rgba(196, 192, 192, 0.04);
   --ts-blur: blur(30px) saturate(100%) brightness(100%);
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  width: 100% !important;
+  overflow-x: hidden;
+  position: relative;
 }

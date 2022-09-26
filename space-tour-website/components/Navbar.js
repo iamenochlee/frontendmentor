@@ -23,6 +23,16 @@ export default function Navbar() {
     return () => window.removeEventListener("mousedown", handleClickOutside);
   }, [node]);
 
+  //disabling scroll when the sidebar is open
+  useEffect(() => {
+    if (shown) {
+      document.body.style.height = "100vh";
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.height = "auto";
+      document.body.style.overflowY = "unset";
+    }
+  }, [shown]);
   //this closes the sidenav whenever a new route is visited
   useEffect(() => {
     setShown(false);
@@ -31,7 +41,9 @@ export default function Navbar() {
   return (
     <>
       <nav className={classes.navbar}>
-        <img className={classes.logo} src="/images/logo.svg" alt="logo" />
+        <Link href="/">
+          <img className={classes.logo} src="/images/logo.svg" alt="logo" />
+        </Link>
         <span className={classes.line}></span>
 
         <div ref={node}>
@@ -53,7 +65,7 @@ export default function Navbar() {
             />
           </button>
           <ul
-            aria-label="navbarNav"
+            aria-labelledby="navbarNav"
             className={classes.menu}
             style={{
               left: !shown ? "100%" : "25%",

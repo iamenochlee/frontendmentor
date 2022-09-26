@@ -161,7 +161,7 @@
   background-color: white;
 }
 .nav button:active {
-  border: 1px dotted white;
+  outline: 2px dotted white;
 }
 
 .nav button:not(.active):hover {

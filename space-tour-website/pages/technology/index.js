@@ -19,14 +19,14 @@ export default function Technology() {
     if (index === null) {
       setIndex(0);
     } else {
-      localStorage.setItem("index", JSON.stringify(index));
+      localStorage.setItem("index3", JSON.stringify(index));
     }
   }, [index]);
 
   //retrieving index
 
   useEffect(() => {
-    const savedIndex = JSON.parse(localStorage.getItem("index"));
+    const savedIndex = JSON.parse(localStorage.getItem("index3"));
     if (savedIndex === null) {
       setIndex(0);
     } else {
@@ -52,12 +52,7 @@ export default function Technology() {
       <Head>
         <title>Space Tour Website | Technology</title>
       </Head>
-      <motion.div
-        className={classes.home}
-        initial={{ opacity: 0.6 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}>
+      <div className={classes.home}>
         <h2 className={classes.title}>
           <span className={classes.info}>03 </span>Space Launch 101
         </h2>
@@ -81,11 +76,16 @@ export default function Technology() {
               alt={`${result?.name} image`}
             />
           </div>
-          <div className={classes.container}>
+          <motion.div
+            className={classes.container}
+            initial={{ opacity: 0.6 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}>
             <div className={classes.nav}>
               {objectData?.technology.map((n, i) => (
                 <button
-                  aria-labelledby="click to switch to see a new technology"
+                  aria-label="click to switch to see a new technology"
                   className={i === index ? classes.active : undefined}
                   key={i}
                   onClick={() => setIndex(i)}>
@@ -104,9 +104,9 @@ export default function Technology() {
               <h1 className={classes.name}>{result?.name}</h1>
               <p className={classes.desc}>{result?.description}</p>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }

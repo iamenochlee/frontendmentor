@@ -9,7 +9,7 @@
     margin-right: 0;
     height: 2px;
     position: absolute;
-    top: 10vh;
+    top: 11vh;
     background-color: var(--bg-clr);
     left: 10%;
     z-index: 4;
@@ -58,12 +58,13 @@
   .navbar {
     align-items: center;
     padding: 0;
-    padding-top: 1.5em;
+    padding-top: 2.5em;
     padding-left: 5vw;
   }
 
   .navbar .logo {
     width: 48px;
+    cursor: pointer;
   }
 }
 
@@ -78,7 +79,7 @@
   padding: 0;
   margin: 0;
   top: 33px;
-  left: 85%;
+  left: 88%;
   margin-right: 4em;
   width: max-content;
 }
@@ -130,7 +131,7 @@
     display: flex;
     list-style: none;
     gap: 2.4em;
-    padding-block: var(--padding-base);
+    padding-block: calc(var(--padding-base) - 3px);
     padding-inline: 3em;
     background-color: var(--ts-clr);
     backdrop-filter: var(--ts-blur);

@@ -62,12 +62,7 @@ export default function Destination() {
       <Head>
         <title>Space Tour Website | Destination</title>
       </Head>
-      <motion.div
-        className={classes.home}
-        initial={{ opacity: 0.6 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}>
+      <div className={classes.home}>
         <h2 className={classes.title}>
           <span className={classes.info}>01</span> Pick Your Destination
         </h2>
@@ -79,7 +74,7 @@ export default function Destination() {
                 initial="hidden"
                 animate="enter"
                 exit="exit"
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5 }}
                 whileHover={{
                   scale: 1.09,
                 }}
@@ -91,11 +86,16 @@ export default function Destination() {
               />
             )}
           </div>
-          <div className={classes.container}>
+          <motion.div
+            className={classes.container}
+            initial={{ opacity: 0.6 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}>
             <div className={classes.nav}>
               {objectData?.destinations.map((n, i) => (
                 <button
-                  aria-labelledby="click to switch to see a new destination"
+                  aria-label="click to switch to see a new destination"
                   className={i === index ? classes.active : undefined}
                   key={i}
                   onClick={() => setIndex(i)}>
@@ -123,9 +123,9 @@ export default function Destination() {
                 </div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }

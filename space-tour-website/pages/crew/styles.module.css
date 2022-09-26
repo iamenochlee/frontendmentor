@@ -50,7 +50,7 @@
     align-items: center;
     gap: 0.8em;
     font-weight: 400;
-    letter-spacing: normal;
+    letter-spacing: var(--ls-space-md);
     padding-left: 7vw;
   }
 }
@@ -182,8 +182,8 @@
   outline: none;
 }
 
-.nav div:hover {
-  background-color: hsl(0, 0%, 85%);
+.nav button:hover {
+  background-color: hsl(0, 0%, 75%);
 }
 
 @media (min-width: 50em) {

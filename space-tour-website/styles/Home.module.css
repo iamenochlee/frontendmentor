@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
 .home {
   width: 100%;
   background-image: url("/images/background-home-mobile.jpg");
@@ -22,9 +23,9 @@
 
 @media (min-width: 65em) {
   .home {
-    padding-top: 22.6em;
+    padding-top: 22.2em;
     background-image: url("/images/background-home-desktop.jpg");
-    padding-bottom: calc(var(--padding-md) + 14px);
+    padding-bottom: calc(var(--padding-md) + 21px);
   }
 }
 
@@ -53,13 +54,14 @@
 @media (min-width: 42em) {
   .title {
     font-size: var(--fs-pr);
+    letter-spacing: var(--ls-space-lg);
   }
 }
 
 @media (min-width: 65em) {
   .title {
     font-size: 1.75em;
-    margin-bottom: 0;
+    margin-bottom: -5px;
   }
 }
 .header {
@@ -81,6 +83,8 @@
 @media (min-width: 65em) {
   .header {
     margin-bottom: 0;
+    font-size: 9.4rem;
+    margin-bottom: 17px;
   }
 }
 
@@ -96,7 +100,7 @@
   .desc {
     padding-inline: 20%;
     margin-bottom: var(--margin-xl);
-    line-height: 1.9;
+    line-height: 1.7;
   }
 }
 
@@ -108,7 +112,13 @@
     width: 77%;
   }
 }
-@media (min-width: 77em) {
+
+@media (min-width: 72em) {
+  .desc {
+    width: 55%;
+  }
+}
+@media (min-width: 100em) {
   .desc {
     width: 50%;
   }

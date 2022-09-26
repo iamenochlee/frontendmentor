@@ -17,14 +17,14 @@ export default function Crew() {
     if (index === null) {
       setIndex(0);
     } else {
-      localStorage.setItem("index", JSON.stringify(index));
+      localStorage.setItem("index2", JSON.stringify(index));
     }
   }, [index]);
 
   //retrieving index
 
   useEffect(() => {
-    const savedIndex = JSON.parse(localStorage.getItem("index"));
+    const savedIndex = JSON.parse(localStorage.getItem("index2"));
     if (savedIndex === null) {
       setIndex(0);
     } else {
@@ -50,12 +50,7 @@ export default function Crew() {
       <Head>
         <title>Space Tour Website | Crew</title>
       </Head>
-      <motion.div
-        className={classes.home}
-        initial={{ opacity: 0.6 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}>
+      <div className={classes.home}>
         <h2 className={classes.title}>
           <span className={classes.info}>02</span> Meet Your Crew
         </h2>
@@ -81,7 +76,7 @@ export default function Crew() {
             <div className={classes.nav}>
               {objectData?.crew.map((n, i) => (
                 <button
-                  aria-labelledby="click to switch to see a new crew"
+                  aria-label="click to switch to see a new crew"
                   className={i === index ? classes.active : undefined}
                   key={i}
                   onClick={() => setIndex(i)}></button>
@@ -99,7 +94,7 @@ export default function Crew() {
             </motion.div>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </>
   );
 }
