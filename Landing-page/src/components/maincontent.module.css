@@ -1,0 +1,117 @@
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --almost-grey: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3em;
+  width: 100%;
+  margin-bottom: 6em;
+}
+
+@media (min-width: 35em) {
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: auto;
+    width: 95%;
+  }
+}
+
+section:nth-child(2) {
+  width: 100%;
+}
+@media (min-width: 35em) {
+  section:nth-child(2) {
+    width: 34%;
+  }
+}
+section:nth-child(2) img {
+  width: 100%;
+}
+
+@media (min-width: 35em) {
+  section:nth-child(2) img {
+    content: url("../images/image-hero-desktop.png");
+  }
+}
+
+section:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+@media (min-width: 35em) {
+  section:nth-child(1) {
+    width: 40%;
+    gap: 3em;
+    margin-left: 2.5vw;
+    padding-top: 4em;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 74em) {
+  section:nth-child(1) {
+    padding-top: 7.7em;
+  }
+}
+
+section:nth-child(1) button {
+  padding: 0.8em 1.7em;
+  font-size: 1em;
+  border-radius: 12px;
+  color: white;
+  border: 2px solid var(--almost-black);
+  background-color: var(--almost-black);
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+@media (min-width: 35em) {
+  section:nth-child(1) button {
+    margin-bottom: 0.7em;
+  }
+}
+
+@media (min-width: 74em) {
+  section:nth-child(1) button {
+    margin-bottom: 3em;
+    font-size: 1.15em;
+  }
+}
+
+section:nth-child(1) button:hover {
+  background-color: transparent;
+  color: var(--almost-black);
+  border-color: var(--almost-black);
+}
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  gap: 4%;
+}
+
+.imageContainer {
+  object-fit: cover;
+}
+
+.clients .imageContainer img {
+  object-fit: cover;
+  width: 100%;
+  background-size: cover;
+}
+@media (min-width: 45em) {
+  .clients {
+    width: 88%;
+  }
+}
