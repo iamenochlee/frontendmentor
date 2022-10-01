@@ -5,11 +5,21 @@ import styles from "./header.module.css";
 const Dropdown = (props) => {
   const { menu, show } = props;
   return (
-    <ul className={`${styles.dropdown} ${show ? styles.show : ""}`}>
+    <ul
+      id="dropdown"
+      className={`${styles.dropdown} ${show ? styles.show : ""}`}>
       {menu.map((menuItem, index) => (
         <li key={index}>
-          {menuItem.icon && <img src={menuItem.icon} alt={menuItem.title} />}
-          <a>{menuItem.title}</a>
+          <a href="" onClick={(e) => e.preventDefault()}>
+            {menuItem.icon && (
+              <img
+                aria-hidden="true"
+                src={menuItem.icon}
+                alt={`${menuItem.title} icon`}
+              />
+            )}
+            {menuItem.title}
+          </a>
         </li>
       ))}
     </ul>

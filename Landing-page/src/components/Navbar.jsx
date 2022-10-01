@@ -58,6 +58,8 @@ const Navbar = ({ menu }) => {
         <button
           className={classes.menuToggle}
           onClick={handleMenuClick}
+          aria-expanded={!shown ? "false" : "true"}
+          aria-haspopup="true"
           aria-label="toggle navigation">
           <img
             aria-hidden="true"
@@ -78,18 +80,29 @@ const Navbar = ({ menu }) => {
             className={classes.listItem}
             style={{ display: "flex" }}>
             {menu.map((menuItem, index) => (
-              <li key={index} onClick={handleClick(index)}>
-                <a>{menuItem.title}</a>
-                {menuItem.openMenuIcon && (
-                  <img
-                    alt="Dropdown menu icon"
-                    src={
-                      !clickedMenu[index]
-                        ? menuItem.closeMenuIcon
-                        : menuItem.openMenuIcon
-                    }
-                  />
-                )}
+              <li
+                aria-label={menuItem.submenu && "dropdowm"}
+                key={index}
+                aria-expanded={
+                  menuItem.submenu && (!clickedMenu[index] ? "false" : "true")
+                }
+                onClick={handleClick(index)}
+                role={menuItem.submenu && "button"}
+                aria-haspopup={menuItem.submenu && "true"}>
+                <a href="" onClick={(e) => e.preventDefault()}>
+                  {menuItem.title}
+                  {menuItem.openMenuIcon && (
+                    <img
+                      alt="Dropdown menu icon"
+                      src={
+                        !clickedMenu[index]
+                          ? menuItem.closeMenuIcon
+                          : menuItem.openMenuIcon
+                      }
+                    />
+                  )}
+                </a>
+
                 {menuItem.submenu && (
                   <Dropdown menu={menuItem.submenu} show={clickedMenu[index]} />
                 )}

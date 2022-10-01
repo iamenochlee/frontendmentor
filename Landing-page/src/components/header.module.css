@@ -31,6 +31,11 @@
   }
 }
 
+.header a:focus {
+  outline-offset: 3px;
+  outline: 2.5px var(--almost-black) dotted;
+}
+
 .menuToggle {
   position: absolute;
   z-index: 3;
@@ -40,6 +45,11 @@
   margin: 0;
   border: none;
   background: none;
+}
+
+.menuToggle:focus {
+  outline-offset: 5px;
+  outline: 2.5px var(--almost-black) dotted;
 }
 
 @media (min-width: 33em) {
@@ -115,6 +125,15 @@
   width: max-content;
 }
 
+.navbar li a:focus {
+  outline-offset: 3px;
+  outline: 2.5px var(--almost-black) dotted;
+}
+
+.navbar li a {
+  color: var(--almost-black);
+  text-decoration: none;
+}
 @media (min-width: 45em) {
   .navbar li {
     font-size: 0.9rem;
@@ -167,6 +186,15 @@
 
 .navbar li:nth-child(6):hover {
   border-color: var(--almost-black);
+}
+
+.navbar li:nth-child(6):has(a:focus) {
+  background-color: var(--almost-black);
+}
+
+.navbar li:nth-child(6):has(a:focus) a {
+  outline: none !important;
+  color: #eee;
 }
 
 .navbar li:has(.dropdown) .dropdown {
@@ -223,10 +251,23 @@
 .dropdown li {
   padding-inline: 1.5em;
   padding-block: 0.6em;
-  display: flex;
-  gap: 1em;
   margin-bottom: 0 !important;
 }
+
+.dropdown li a:focus {
+  outline-offset: 3px;
+  outline: 2.5px var(--almost-black) dotted;
+}
+
+.dropdown li a {
+  color: var(--almost-black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
 @media (min-width: 45em) {
   .dropdown li {
     padding-inline: 1.4em;

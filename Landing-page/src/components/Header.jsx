@@ -7,7 +7,9 @@ import classes from "./header.module.css";
 const Header = ({ menu }) => {
   return (
     <header className={classes.header}>
-      <img src={Logo} alt="snap" className="logo" />
+      <a href="/">
+        <img src={Logo} alt="snap" className="logo" />
+      </a>
       <Navbar menu={menu} />
     </header>
   );
