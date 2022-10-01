@@ -64,7 +64,7 @@ const Navbar = ({ menu }) => {
           <img
             aria-hidden="true"
             src={!shown ? iconMenu : iconCloseMenu}
-            alt="show navigation"
+            alt={!shown ? "show navigation" : "close navigation"}
           />
         </button>
       )}
@@ -93,7 +93,11 @@ const Navbar = ({ menu }) => {
                   {menuItem.title}
                   {menuItem.openMenuIcon && (
                     <img
-                      alt="Dropdown menu icon"
+                      alt={
+                        !clickedMenu[index]
+                          ? "Open Dropdown menu"
+                          : "close dropdown menu"
+                      }
                       src={
                         !clickedMenu[index]
                           ? menuItem.closeMenuIcon
