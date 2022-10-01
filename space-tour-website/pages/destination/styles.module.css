@@ -160,12 +160,18 @@
   bottom: -8px;
   background-color: white;
 }
-.nav button:active {
-  outline: 2px dotted white;
-}
 
 .nav button:not(.active):hover {
   opacity: 0.7;
+}
+
+.nav button:not(.active):focus {
+  outline-offset: 3px;
+  outline: 1.8px dotted white;
+}
+
+.nav button:is(.active):focus {
+  outline: none;
 }
 
 .planet {

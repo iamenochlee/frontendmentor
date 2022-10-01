@@ -167,16 +167,26 @@
   }
 }
 
-.text {
+.circle a {
   font-size: var(--fs-pr);
   text-transform: uppercase;
   font-family: "Bellefair";
   color: black;
   padding: 40%;
+  text-decoration: none;
 }
 
 @media (min-width: 42em) {
-  .text {
+  .circle a {
     font-size: var(--fs-md);
   }
+}
+
+.circle a:focus {
+  outline: none;
+}
+
+.circle:has(a:focus) {
+  outline: 4px dotted white;
+  outline-offset: 30px;
 }

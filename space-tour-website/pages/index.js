@@ -41,8 +41,8 @@ export default function Home() {
               transition={{ duration: 0.8 }}>
               <div className={classes.circle}>
                 <div className={classes.effect}></div>
-                <Link href="/destination">
-                  <p className={classes.text}>{home.type}</p>
+                <Link className={classes.text} href="/destination">
+                  {home.type}
                 </Link>
               </div>
             </motion.div>

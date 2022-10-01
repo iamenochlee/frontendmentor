@@ -185,6 +185,10 @@
 .nav button:hover {
   background-color: hsl(0, 0%, 75%);
 }
+.nav button:not(.active):focus {
+  outline: 2px solid white;
+  outline-offset: 5px;
+}
 
 @media (min-width: 50em) {
   .nav button {

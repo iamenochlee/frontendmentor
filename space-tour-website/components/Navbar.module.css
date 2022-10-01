@@ -91,8 +91,8 @@
 }
 
 .button:focus {
-  outline: 2px dotted var(--bg-clr);
-  outline-offset: 2px;
+  outline: 1px dotted white;
+  outline-offset: 5px;
 }
 .menu {
   background: rgba(196, 192, 192, 0.04);
@@ -128,7 +128,7 @@
 @media (min-width: 42em) {
   .menu {
     all: unset;
-    display: flex;
+    display: flex !important;
     list-style: none;
     gap: 2.4em;
     padding-block: calc(var(--padding-base) - 3px);
@@ -158,10 +158,25 @@
   margin-bottom: var(--margin-pr);
   position: relative;
 }
-
+.menu li a:focus {
+  outline-offset: 5px;
+  outline: 1px dotted white;
+}
+@media (min-width: 45em) {
+  .menu li a:focus {
+    outline: none;
+  }
+  .menu li:has(a:focus) {
+    outline-offset: 5px;
+    outline: 2px dotted white;
+  }
+}
 .menu li a {
-  padding-left: 0.85em;
   letter-spacing: var(--ls-space-md);
+}
+
+.menu li small {
+  padding-right: 0.85em;
 }
 
 .menu li:hover ::after {

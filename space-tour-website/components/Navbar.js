@@ -52,7 +52,10 @@ export default function Navbar() {
             aria-labelledby="navbarNav"
             aria-controls="navbarNav"
             aria-expanded={shown ? "true" : "false"}
-            onClick={() => setShown(!shown)}
+            onClick={(e) => {
+              e.preventDefault();
+              setShown(!shown);
+            }}
             style={{
               display: "block",
             }}>
@@ -65,39 +68,41 @@ export default function Navbar() {
               alt="toggle navigation visibility"
             />
           </button>
+
           <ul
             id="navbarNav"
             aria-label="navbarNav"
             className={classes.menu}
             style={{
-              left: !shown ? "100%" : "25%",
+              left: "25%",
+              display: !shown ? "none" : "block",
             }}>
             <li
               className={
                 router.pathname == "/" ? `${classes.active}` : undefined
               }>
-              <small>00</small>
+              <small aria-hidden="true">00</small>
               <Link href="/">Home</Link>
             </li>
             <li
               className={
                 router.pathname == "/destination" ? `${classes.active}` : ""
               }>
-              <small>01</small>
+              <small aria-hidden="true">01</small>
               <Link a href="/destination">
                 Destination
               </Link>
             </li>
             <li
               className={router.pathname == "/crew" ? `${classes.active}` : ""}>
-              <small>02</small>
+              <small aria-hidden="true">02</small>
               <Link href="/crew">Crew</Link>
             </li>
             <li
               className={
                 router.pathname == "/technology" ? `${classes.active}` : ""
               }>
-              <small>03</small>
+              <small aria-hidden="true">03</small>
               <Link href="/technology">Technology</Link>
             </li>
           </ul>
