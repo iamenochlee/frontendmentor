@@ -7,7 +7,7 @@
 ### Links
 
 - Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/master/huddle-landing-page-with-curved-sections-master)
-- Live Site URL: [Github Pages](https://iamenochlee.github.io/frontendmentor/huddle-landing-page-with-curved-sections-master/)
+- Live Site URL: [Github Pages](https://github.com/iamenochlee/frontendmentor/tree/master/huddle-landing-page-with-curved-sections-master)
 
 ## My process
 
