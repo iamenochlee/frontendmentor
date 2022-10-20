@@ -24,7 +24,7 @@ export default function Crew() {
   }
 
   const variants = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 80 },
     enter: { opacity: 1, x: 0 },
     exit: { opacity: 0 },
   };
@@ -40,10 +40,7 @@ export default function Crew() {
             <h2 className={classes.title}>
               <span className={classes.info}>02</span> Meet Your Crew
             </h2>
-            <motion.div
-              className={classes.body}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}>
+            <div className={classes.body}>
               <motion.div
                 className={classes.image}
                 variants={variants}
@@ -52,7 +49,7 @@ export default function Crew() {
                 exit="exit"
                 key={index}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.2,
                 }}
                 whileHover={{
                   x: 10,
@@ -80,7 +77,7 @@ export default function Crew() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{
-                    duration: 1,
+                    duration: 0.5,
                   }}
                   key={index}>
                   <h1 className={classes.role}>{result?.role}</h1>
@@ -88,7 +85,7 @@ export default function Crew() {
                   <p className={classes.desc}>{result?.bio}</p>
                 </motion.div>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
       </div>

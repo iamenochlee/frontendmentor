@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
-
+*,
 body,
 h1,
 h2,
@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   line-height: 1.5;
   min-height: 100vh;
+  background: #1d1d1d;
   font-family: "Barlow Condensed", sans-serif;
 }
 
