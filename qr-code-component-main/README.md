@@ -34,7 +34,6 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Grid
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
@@ -47,7 +46,7 @@ I am currently focusing on learning react, and will proceed with other frontend 
 
 ### Useful resources
 
-- [Centering Divs](https://blog.hubspot.com/website/center-div-css#:~:text=You%20can%20do%20this%20by,the%20div)%20vertically%20and%20horizontally.) - This was helpful in centering the boxes in this exercise, highly recommended.
+- [Centering Divs](https://blog.hubspot.com/website/center-div-css#:~:text=You%20can%20do%20this%20by,the%20div) - This was helpful in centering the boxes in this exercise, highly recommended.
 - [Working with Images](https://www.w3schools.com/css/css3_images.asp) - This is an amazing article which helped me finally understand images. I'd recommend it to anyone still learning this concept.
 
 
