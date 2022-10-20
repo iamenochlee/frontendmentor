@@ -52,6 +52,12 @@
 
 .navbar .logo {
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.navbar .logo:focus-visible {
+  outline: dotted 2px white;
+  outline-offset: 5px;
 }
 
 @media (min-width: 42em) {
@@ -64,6 +70,7 @@
 
   .navbar .logo {
     width: 48px;
+    height: 48px;
     cursor: pointer;
   }
 }
@@ -78,10 +85,18 @@
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 33px;
+  top: 30px;
   left: 88%;
   margin-right: 4em;
-  width: max-content;
+  width: 26px;
+  height: 25px;
+  border-radius: 4px;
+}
+
+.button:focus-visible,
+.button:focus {
+  outline: dotted 2px white;
+  outline-offset: 5px;
 }
 
 @media (min-width: 25em) {
@@ -90,10 +105,6 @@
   }
 }
 
-.button:focus {
-  outline: 1px dotted white;
-  outline-offset: 5px;
-}
 .menu {
   background: rgba(196, 192, 192, 0.04);
   min-height: 101vh;

@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 import Head from "next/head";
+import { MotionConfig } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,9 +11,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/images/logo.svg" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <MotionConfig reducedMotion="user">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </MotionConfig>
     </>
   );
 }

@@ -1,30 +1,22 @@
 //dependencies
-import { useState, useRef, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
+//hooks
+import useClickOutsideToClose from "./hooks/useClickOutsideToClose";
 
 //styles
 import classes from "./Navbar.module.css";
 
 //navbar
 export default function Navbar() {
-  const [shown, setShown] = useState(false);
+  const [shown, setShown] = React.useState(false);
   const router = useRouter();
-  const node = useRef(null);
-
-  //detecting and closing the sidenav on click outside
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (!node.current.contains(e.target)) {
-        setShown(false);
-      }
-    }
-    window.addEventListener("mousedown", handleClickOutside);
-    return () => window.removeEventListener("mousedown", handleClickOutside);
-  }, [node]);
+  const { node } = useClickOutsideToClose(setShown);
 
   //disabling scroll when the sidebar is open
-  useEffect(() => {
+  React.useEffect(() => {
     if (shown) {
       document.body.style.height = "100vh";
       document.body.style.overflowY = "hidden";
@@ -34,7 +26,7 @@ export default function Navbar() {
     }
   }, [shown]);
   //this closes the sidenav whenever a new route is visited
-  useEffect(() => {
+  React.useEffect(() => {
     setShown(false);
   }, [router.pathname]);
 
@@ -42,25 +34,30 @@ export default function Navbar() {
     <>
       <nav className={classes.navbar}>
         <Link href="/">
-          <img className={classes.logo} src="/images/logo.svg" alt="logo" />
+          <a
+            className={classes.logo}
+            href=""
+            style={{ position: "relative", display: "block" }}>
+            <Image src="/images/logo.svg" alt="logo" layout="fill" />
+          </a>
         </Link>
         <span className={classes.line}></span>
 
         <div ref={node}>
           <button
             className={classes.button}
+            style={{ display: "block" }}
             aria-labelledby="navbarNav"
-            aria-controls="navbarNav"
+            aria-haspopup="true"
             aria-expanded={shown ? "true" : "false"}
             onClick={(e) => {
               e.preventDefault();
               setShown(!shown);
-            }}
-            style={{
-              display: "block",
             }}>
-            <img
-              className={classes.toggler}
+            <Image
+              height="100%"
+              width="100%"
+              style={{ display: "block" }}
               src={
                 !shown ? "/images/icon-hamburger.svg" : "/images/icon-close.svg"
               }

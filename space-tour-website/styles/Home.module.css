@@ -11,6 +11,7 @@
   padding-top: var(--padding-lg);
   text-align: center;
   color: white;
+  overflow-y: hidden;
   padding-bottom: var(--padding-md);
 }
 

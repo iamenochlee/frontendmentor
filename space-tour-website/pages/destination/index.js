@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect } from "react";
 import useSWR from "swr";
 
+//hooks
+import useLocalStorage from "../../components/hooks/useLocalStorage";
 //styles
 import classes from "./styles.module.css";
 import { motion } from "framer-motion";
@@ -11,31 +12,10 @@ import { motion } from "framer-motion";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Destination() {
-  //state
-  const [index, setIndex] = React.useState(null);
-
-  //saving index
-  useEffect(() => {
-    if (index === null) {
-      setIndex(0);
-    } else {
-      localStorage.setItem("index", JSON.stringify(index));
-    }
-  }, [index]);
-
-  //retrieving index
-
-  useEffect(() => {
-    const savedIndex = JSON.parse(localStorage.getItem("index"));
-    if (savedIndex === null) {
-      setIndex(0);
-    } else {
-      setIndex(savedIndex);
-    }
-  }, []);
+  const { index, setIndex } = useLocalStorage("destinationIndex");
 
   //data fetcher
-  const { data, error } = useSWR("/api/staticdata", fetcher);
+  const { data } = useSWR("/api/staticdata", fetcher);
   let result;
   let objectData;
   if (data) {
@@ -69,21 +49,24 @@ export default function Destination() {
         <div className={classes.body}>
           <div transition={{ type: "linear" }}>
             {data && (
-              <motion.img
+              <motion.div
                 variants={variants}
                 initial="hidden"
                 animate="enter"
                 exit="exit"
-                transition={{ duration: 0.5 }}
+                className={classes.image}
+                style={{ position: "relative" }}
                 whileHover={{
                   scale: 1.09,
                 }}
-                key={index}
-                className={classes.image}
-                src={result?.images.png}
-                alt={`${result?.name} image`}
-                onClick={(e) => console.log(e.target.src)}
-              />
+                transition={{ duration: 0.5 }}
+                key={index}>
+                <Image
+                  layout="fill"
+                  src={result?.images.png}
+                  alt={`${result?.name} image`}
+                />
+              </motion.div>
             )}
           </div>
           <motion.div

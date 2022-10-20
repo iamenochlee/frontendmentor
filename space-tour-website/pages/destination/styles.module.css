@@ -245,5 +245,12 @@
 @media (min-width: 68em) {
   .details > p {
     margin-bottom: 0;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .details > p {
+    font-size: 1.75rem;
   }
 }
