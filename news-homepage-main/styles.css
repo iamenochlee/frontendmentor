@@ -459,7 +459,7 @@ section:first-of-type {
   animation: slideIn var(--animation) 0.05s forwards ease-in;
 }
 .article:first-of-type {
-  animation: slideLeft var(--animation) 0.1s forwards ease-in-out;
+  animation: slideLeft var(--animation) forwards ease-in-out;
 }
 
 .numbered-articles:nth-of-type(2) {
@@ -479,7 +479,7 @@ section:first-of-type {
 
 @keyframes slideIn {
   0% {
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
   100% {
     transform: translateY(0px);
