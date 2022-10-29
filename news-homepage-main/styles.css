@@ -138,6 +138,7 @@ body {
 @media (min-width: 45em) {
   .list--container {
     all: unset;
+    display: block;
     position: static;
   }
 }

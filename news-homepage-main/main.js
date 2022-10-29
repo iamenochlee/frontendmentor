@@ -43,5 +43,7 @@ document.addEventListener("click", () => {
 //animation
 
 lists.forEach((list, i) => {
-  list.style.animationDuration = `${i === 0 ? 0.3 : i / 4 - i / 30}s`;
+  list.style.animationDuration = `${
+    i === 0 || 1 ? 0.3 + i / 5 : i / 4 - i / 30
+  }s`;
 });
