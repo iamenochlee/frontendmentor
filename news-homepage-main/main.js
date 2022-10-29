@@ -13,7 +13,9 @@ const handleOpen = (el, closeEl) => {
 };
 
 const handleClose = (el, closeEl) => {
-  el.style.display = "none";
+  if (body.getBoundingClientRect().width < 720) {
+    el.style.display = "none";
+  }
   closeEl.alt = "Open Navigation menu";
   body.style.overflow = "scroll";
   closeEl.src = "./assets/images/icon-menu.svg";
