@@ -197,6 +197,7 @@ body {
     flex-direction: row;
     font-size: var(--fs-300);
     gap: calc(var(--spacing-3) + 4px);
+    font-weight: 300;
   }
 }
 
