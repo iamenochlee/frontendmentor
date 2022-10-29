@@ -28,7 +28,10 @@ toggler.addEventListener("click", () => {
 });
 
 document.addEventListener("click", () => {
-  if (navBar !== document.activeElement) {
+  if (
+    navBar !== document.activeElement &&
+    body.getBoundingClientRect().width < 720
+  ) {
     if (document.activeElement !== toggler) {
       handleClose(navBar, image);
     }
