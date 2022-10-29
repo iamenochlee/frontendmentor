@@ -150,6 +150,11 @@ body {
   box-shadow: 0px -150px 500px rgba(0, 0, 0, 0.3);
   animation: entry 0.3s forwards ease;
 }
+
+.list--container:focus,
+.list--container:focus-visible {
+  outline: none;
+}
 @media (min-width: 45em) {
   .list--container {
     all: unset;
