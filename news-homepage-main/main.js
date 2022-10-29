@@ -3,37 +3,39 @@ const navEl = document.querySelector("nav");
 const icon = toggler.querySelector("img");
 const lists = document.querySelectorAll("li");
 const sections = document.querySelectorAll(".section");
+const body = document.body;
 
 //opening navbar and closing navbar
 const handleOpen = (el) => {
   el.style.display = "block";
   icon.src = "./assets/images/icon-menu-close.svg";
   icon.alt = "Close Navigation Menu";
-  document.body.style.overflow = "hidden";
+  body.style.overflow = "hidden";
 };
 
 const handleClose = (el) => {
   el.style.display = "none";
   icon.alt = "Open Navigation menu";
   icon.src = "./assets/images/icon-menu.svg";
-  document.body.style.overflowY = "scroll";
+  body.style.overflowY = "scroll";
 };
 
 //toggling navBar
+navEl.tabIndex = 0;
 toggler.addEventListener("click", () => {
-  if (navEl.style.display === "block") {
-    handleClose(navEl);
-  } else if (navEl.style.display === "none") {
+  if (navEl.style.display === "none") {
     handleOpen(navEl);
+  } else if (navEl.style.display !== "none") {
+    handleClose(navEl);
   }
 });
 
-document.addEventListener("click", () => {
-  if (
-    navEl !== document.activeElement &&
-    document.body.getBoundingClientRect().width < 720
-  ) {
-    if (document.activeElement !== toggler) {
+document.body.addEventListener("click", () => {
+  if (document.activeElement !== toggler) {
+    if (
+      navEl !== document.activeElement &&
+      document.body.getBoundingClientRect().width < 720
+    ) {
       handleClose(navEl);
     }
   }
