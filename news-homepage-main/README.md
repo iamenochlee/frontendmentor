@@ -22,8 +22,8 @@ Picked up this challenge in order to sharpen out my CSS Grid Skills, am glad it 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/tree/master/news-homepage-main)
+- Live Site URL: [Live on Github Pages](https://iamenochlee.github.io/frontendmentor/news-homepage-main/)
 
 ### Built with
 
