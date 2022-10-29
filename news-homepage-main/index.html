@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="iamenochlee" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/logo.svg" />
+    <script src="./main.js" defer></script>
+    <title>News Homepage</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <div class="logo--container">
+          <img class="logo" src="/assets/images/logo.svg" alt="News Logo" />
+        </div>
+        <button class="menu-toggler" aria-label="toggle navbar">
+          <img
+            class="icon"
+            src="./assets/images/icon-menu.svg"
+            alt="Open Navigation menu" />
+        </button>
+        <nav class="list--container" tabindex="0">
+          <ul class="list">
+            <li class="link neutral-hover active"><a href="/">Home</a></li>
+            <li class="link neutral-hover"><a href="/">New</a></li>
+            <li class="link neutral-hover"><a href="/">Popular</a></li>
+            <li class="link neutral-hover"><a href="/">Trending</a></li>
+            <li class="link neutral-hover"><a href="/">Categories</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="grid-col-3">
+        <section class="span-2-columns span-3-rows column">
+          <img
+            class="banner"
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="Web 3" />
+
+          <div class="flex--inverted">
+            <h1 class="heading-text">The Bright Future of Web 3.0?</h1>
+            <div class="flex-column">
+              <p class="desc">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button class="button">Read more</button>
+            </div>
+          </div>
+        </section>
+        <article class="span-3-rows flex-column article">
+          <h2 class="heading-2">New</h2>
+          <div class="article-container">
+            <a href="" class="sub-title accent-hover"
+              >Hydrogen VS Electric Cars</a
+            >
+            <p class="paragraph" light>
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="article-container">
+            <a href="" class="sub-title accent-hover">
+              New The Downsides of AI Artistry
+            </a>
+            <p class="paragraph" light>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="article-container">
+            <a href="" class="sub-title accent-hover"
+              >Is VC Funding Drying Up?</a
+            >
+            <p class="paragraph" light>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </article>
+        <article
+          class="flex-container--inverted span-3-columns numbered-articles">
+          <div class="container">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="Retro PC" />
+            <div class="text-container">
+              <span class="numbering">01</span>
+              <a href="" class="heading-4 neutral-hover">Reviving Retro PCs</a>
+              <p class="paragraph">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <img src="./assets/images/image-top-laptops.jpg" alt="Laptops" />
+            <div class="text-container">
+              <span class="numbering">02</span>
+              <a href="" class="heading-4 neutral-hover"
+                >Top 10 Laptops of 2022</a
+              >
+              <p class="paragraph">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="Gaming Growth" />
+
+            <div class="text-container">
+              <span class="numbering">03</span>
+              <a href="" class="heading-4 neutral-hover"
+                >The Growth of Gaming</a
+              >
+              <p class="paragraph">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
