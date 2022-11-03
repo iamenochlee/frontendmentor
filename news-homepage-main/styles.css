@@ -96,9 +96,9 @@ a:focus-visible {
 }
 @font-face {
   font-family: "Inter";
-  src: url("./assets/fonts/static/Inter-Bold.ttf") format(ttf),
-    url("./assets/fonts/static/Inter-ExtraBold.ttf") format(ttf),
-    url("./assets/fonts/static/Inter-Regular.ttf") format(ttf);
+  src: url("/assets/fonts/static/Inter-Bold.ttf") format(ttf),
+    url("/assets/fonts/static/Inter-ExtraBold.ttf") format(ttf),
+    url("/assets/fonts/static/Inter-Regular.ttf") format(ttf);
 }
 
 /* layout */
