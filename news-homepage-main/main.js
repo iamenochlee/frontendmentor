@@ -14,11 +14,9 @@ function handleIcon() {
   if (toggler.classList.contains("open")) {
     icon.src = "./public/assets/images/icon-menu-close.svg";
     icon.alt = "Close Navigation Menu";
-    body.style.overflow = "hidden";
   } else if (!toggler.classList.contains("open")) {
     icon.src = "./public/assets/images/icon-menu.svg";
     icon.alt = "Open Navigation Menu";
-    body.style.overflowY = "scroll";
   }
 }
 
@@ -26,6 +24,11 @@ function handleIcon() {
 toggler.addEventListener("click", () => {
   toggler.classList.toggle("open");
   navEl.classList.toggle("open");
+  if (navEl.classList.contains("open")) {
+    body.style.overflow = "hidden";
+  } else if (!navEl.classList.contains("open")) {
+    body.style.overflowY = "scroll";
+  }
   handleIcon();
 });
 
@@ -40,6 +43,7 @@ document.body.addEventListener("click", () => {
       toggler.classList.remove("open");
       handleClose(navEl);
       handleIcon();
+      body.style.overflowY = "scroll";
     }
   }
 });
