@@ -3,7 +3,6 @@ const navEl = document.querySelector("nav");
 const icon = toggler.querySelector("img");
 const lists = document.querySelectorAll("li");
 const sections = document.querySelectorAll(".section");
-const body = document.body;
 
 //custom functions
 function handleClose(el) {
@@ -25,9 +24,9 @@ toggler.addEventListener("click", () => {
   toggler.classList.toggle("open");
   navEl.classList.toggle("open");
   if (navEl.classList.contains("open")) {
-    body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
   } else if (!navEl.classList.contains("open")) {
-    body.style.overflowY = "scroll";
+    document.documentElement.style.overflowY = "scroll";
   }
   handleIcon();
 });
@@ -43,7 +42,7 @@ document.body.addEventListener("click", () => {
       toggler.classList.remove("open");
       handleClose(navEl);
       handleIcon();
-      body.style.overflowY = "scroll";
+      document.documentElement.style.overflowY = "scroll";
     }
   }
 });

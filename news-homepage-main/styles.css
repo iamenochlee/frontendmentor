@@ -186,11 +186,14 @@ a:focus-visible {
   color: var(--clr-neutral);
 }
 /* layout */
+html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  max-width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
   background-color: var(--bg);
@@ -200,6 +203,8 @@ body {
 
 .layout {
   padding-inline: 5%;
+  width: 100%;
+  overflow-x: hidden;
   margin-block-end: min(5%, calc(var(--spacing-3) * 1.5));
 }
 
