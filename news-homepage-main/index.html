@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="iamenochlee" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/logo.svg" />
+      href="./public/assets/images/logo.svg" />
     <script src="./main.js" defer></script>
     <title>News Homepage</title>
   </head>
@@ -17,12 +17,15 @@
     <div class="layout">
       <header class="header">
         <div class="logo--container">
-          <img class="logo" src="./assets/images/logo.svg" alt="News Logo" />
+          <img
+            class="logo"
+            src="./public/assets/images/logo.svg"
+            alt="News Logo" />
         </div>
         <button class="menu-toggler" aria-label="toggle Navigation Menu">
           <img
             class="icon"
-            src="./assets/images/icon-menu.svg"
+            src="./public/assets/images/icon-menu.svg"
             alt="Open Navigation menu" />
         </button>
         <nav class="list--container">
@@ -39,7 +42,7 @@
         <section class="span-2-columns span-3-rows column section">
           <img
             class="banner"
-            src="./assets/images/image-web-3-mobile.jpg"
+            src="./public/assets/images/image-web-3-mobile.jpg"
             alt="Web 3" />
 
           <div class="flex--inverted">
@@ -54,7 +57,9 @@
             </div>
           </div>
         </section>
-        <article class="span-3-rows flex-column article section">
+        <aside
+          aria-label="Recent News"
+          class="span-3-rows flex-column article section">
           <h2 class="heading-2">New</h2>
           <div class="article-container">
             <a href="" class="sub-title accent-hover"
@@ -82,11 +87,14 @@
               what that means.
             </p>
           </div>
-        </article>
-        <article
+        </aside>
+        <div
+          aria-label="Hot News"
           class="flex-container--inverted span-3-columns numbered-articles section">
           <div class="container">
-            <img src="./assets/images/image-retro-pcs.jpg" alt="Retro PC" />
+            <img
+              src="./public/assets/images/image-retro-pcs.jpg"
+              alt="Retro PC" />
             <div class="text-container">
               <span class="numbering">01</span>
               <a href="" class="heading-4 neutral-hover">Reviving Retro PCs</a>
@@ -96,7 +104,9 @@
             </div>
           </div>
           <div class="container">
-            <img src="./assets/images/image-top-laptops.jpg" alt="Laptops" />
+            <img
+              src="./public/assets/images/image-top-laptops.jpg"
+              alt="Laptops" />
             <div class="text-container">
               <span class="numbering">02</span>
               <a href="" class="heading-4 neutral-hover"
@@ -109,7 +119,7 @@
           </div>
           <div class="container">
             <img
-              src="./assets/images/image-gaming-growth.jpg"
+              src="./public/assets/images/image-gaming-growth.jpg"
               alt="Gaming Growth" />
 
             <div class="text-container">
@@ -122,7 +132,7 @@
               </p>
             </div>
           </div>
-        </article>
+        </div>
       </main>
     </div>
   </body>
