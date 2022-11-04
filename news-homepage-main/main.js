@@ -14,9 +14,11 @@ function handleIcon() {
   if (toggler.classList.contains("open")) {
     icon.src = "./public/assets/images/icon-menu-close.svg";
     icon.alt = "Close Navigation Menu";
+    body.style.overflow = "hidden";
   } else if (!toggler.classList.contains("open")) {
     icon.src = "./public/assets/images/icon-menu.svg";
     icon.alt = "Open Navigation Menu";
+    body.style.overflowY = "scroll";
   }
 }
 
