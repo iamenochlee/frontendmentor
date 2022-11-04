@@ -31,6 +31,7 @@ Picked up this challenge in order to sharpen out my CSS Grid Skills, am glad it 
 - CSS Grid
 - CSS custom properties
 - Flexbox
+-Javascript
 - Mobile-first workflow
 - CSS Animations
 - CubeCSS components style approach
