@@ -32,7 +32,7 @@
 @media (min-width: 40em) and (max-width: 65em) {
   :root {
     --paragraph: clamp(1.1rem, 1vw + 0.3rem, 1.5rem);
-    --heading-1: clamp(2rem, 3.05vw + 0.3rem, 3.2rem);
+    --heading-1: 2.8rem;
     --heading-3: var(--fs-400);
     --heading-4: var(--fs-400);
     --fs-500: var(--paragraph);
@@ -130,9 +130,10 @@ a:focus-visible {
 }
 
 .heading-2 {
+  line-height: 0.92;
   color: var(--clr-accent);
   font-size: 2rem;
-  font-weight: medium;
+  font-weight: 800;
 }
 .sub-title {
   margin-bottom: var(--spacing-1);
@@ -155,7 +156,7 @@ a:focus-visible {
   line-height: 1.5;
 }
 
-.paragraph[light] {
+.paragraph.light {
   color: var(--clr-light);
 }
 
@@ -204,6 +205,7 @@ body {
   background-color: var(--bg);
   padding-block-start: var(--spacing-3);
   position: relative;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 65em) {
@@ -224,7 +226,7 @@ body {
 }
 @media (min-width: 75em) {
   .layout {
-    padding-inline: 7.5%;
+    padding-inline: 9%;
   }
 }
 @media (min-width: 88em) {
@@ -384,19 +386,26 @@ body {
   background-color: var(--clr-base);
 }
 
+.button:focus {
+  outline: 1px solid var(--clr-focus);
+  outline-offset: 4px;
+}
+
 /* layouts utils */
-.neutral-hover {
+.neutral-effect {
   transition: color 0.5s ease;
 }
-.neutral-hover:hover {
+.neutral-effect:hover,
+.neutral-effect:focus {
   color: var(--clr-neutral);
 }
 
-.accent-hover {
+.accent-effect {
   transition: color 0.5s ease;
 }
 
-.accent-hover:hover {
+.accent-effect:hover,
+.accent-effect:focus {
   color: var(--clr-accent);
 }
 .column {
@@ -458,6 +467,7 @@ body {
   gap: var(--spacing-2);
   color: var(--clr-white);
   margin-bottom: var(--spacing-3);
+  --clr-focus: hsl(225, 2%, 66%);
 }
 
 .article .p {
