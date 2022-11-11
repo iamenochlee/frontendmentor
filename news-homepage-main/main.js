@@ -3,7 +3,11 @@ const navEl = document.querySelector("nav");
 const icon = toggler.querySelector("img");
 const lists = document.querySelectorAll("li");
 const sections = document.querySelectorAll(".section");
+const firstLink = lists[0].querySelector("a");
+const nextEl = document.querySelector(".button");
 
+//mobile range
+const inRange = document.body.getBoundingClientRect().width < 720;
 //custom functions
 function handleClose(el) {
   el.classList.remove("open");
@@ -32,17 +36,26 @@ toggler.addEventListener("click", () => {
 });
 
 //closing on click outside
-navEl.tabIndex = 0;
+if (inRange) {
+  navEl.tabIndex = 0;
+}
 document.body.addEventListener("click", () => {
   if (document.activeElement !== toggler) {
-    if (
-      navEl !== document.activeElement &&
-      document.body.getBoundingClientRect().width < 720
-    ) {
+    if (navEl !== document.activeElement && inRange) {
       toggler.classList.remove("open");
       handleClose(navEl);
       handleIcon();
       document.documentElement.style.overflowY = "scroll";
+    }
+  }
+});
+
+//controlling navbar elements focu
+
+document.body.addEventListener("focusin", () => {
+  if (inRange && navEl.classList.contains("open")) {
+    if (nextEl == document.activeElement) {
+      toggler.focus();
     }
   }
 });
