@@ -5,7 +5,7 @@
   --heading-4: clamp(0.88rem, 0.97vw + 0.1rem, 1.2rem);
   --fs-300: 0.96rem;
   --fs-400: 1.2rem;
-  --fs-500: 0.84rem;
+  --fs-500: 0.95rem;
   --paragraph: var(--fs-500);
   --link: 0.87rem;
 
