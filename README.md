@@ -1,6 +1,6 @@
 # frontendmentor
 
-A collection repository of all my Frontend Mentor challenge solutions.
+a collective repository of all my Frontend Mentor challenge solutions.
 
 ### Projects
 
