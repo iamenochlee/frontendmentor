@@ -15,7 +15,7 @@ This is a solution to the [Space Tourism Website](https://www.frontendmentor.io/
 ### Links
 
 - Solution URL: [Github](https://github.com/iamenochlee/frontendmentor/tree/master/space-tour-website)
-- Live Site URL: [Vercel](https://space-tour-website.vercel.app/)
+- Live Site URL: [Vercel](https://frontendmentor-five-omega.vercel.app/)
 
 ## My process
 
